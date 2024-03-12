@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TextTyping {
     // Method bellow will print the text out with the required delay.
-    // Added boolean appleDelay to function so we can override this when needed.
+    // Added boolean appleDelay to function to override this when needed.
     public static void printWithDelays(String message, boolean applyDelay) throws InterruptedException {
         if (applyDelay) {
             // This for loop iterates over each char in the string.

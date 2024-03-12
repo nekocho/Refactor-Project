@@ -1,6 +1,6 @@
 import gameIntro.IntroText;
 import gameIntro.StartGame;
-import gameLevels.IntroductionLevel;
+import gameLevels.introLevel;
 import textLogic.LoadingDots;
 
 public class Main {
@@ -8,11 +8,10 @@ public class Main {
         try {
             IntroText.displayGameName();
             IntroText.displayAuthorName();
-            System.out.println();
             LoadingDots.printLoadingDots(6);
             StartGame.promptToStartGame();
-            System.out.println();
-            IntroductionLevel.start();
+            LoadingDots.printLoadingDots(6);
+            introLevel.start();
         } catch (InterruptedException e) {
             System.err.println("An error occurred while running the game: " + e.getMessage());
             e.printStackTrace();

@@ -1,6 +1,6 @@
 package textLogic;
 
-public class LinePrinter {
+public class introTextPrinter {
     // Method to print a line with a slight delay
     public static void printLine(String line) throws InterruptedException {
         TextTyping.printWithDelays(line, false); // Print the line without delay

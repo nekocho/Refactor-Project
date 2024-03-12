@@ -5,11 +5,15 @@ import textLogic.TextTyping;
 import java.util.Scanner;
 
 public class StartGame {
-    public static boolean promptToStartGame() throws InterruptedException {
+    public static void promptToStartGame() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
-        String promptMessage = "Do you want to start this epic adventure? (y/n): ";
-        TextTyping.printWithDelays(promptMessage, true);
-        String input = scanner.nextLine().trim().toLowerCase();
-        return input.equals("y") || input.equals("yes");
+        String input;
+        do {
+            String promptMessage = "So you want to become a Software Engineer right? (y/n): ";
+            TextTyping.printWithDelays(promptMessage, true);
+            input = scanner.nextLine().trim().toLowerCase();
+        } while (!input.equals("y"));
+
+        // If the user selects 'y', you can proceed with the rest of your game initialization or logic.
     }
 }

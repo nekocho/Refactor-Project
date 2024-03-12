@@ -1,10 +1,11 @@
 package gameLevels;
 
+import textLogic.LoadingDots;
 import textLogic.TextTyping;
 
 import java.util.Scanner;
 
-public class IntroductionLevel {
+public class introLevel {
     public static void start() throws InterruptedException {
         // Introductory text with delays
         String introText =
@@ -22,8 +23,10 @@ public class IntroductionLevel {
         Scanner scanner = new Scanner(System.in);
         String playerName = scanner.nextLine();
 
+        LoadingDots.printLoadingDots(6);
+
         // Greeting with delays
-        String greetingText = "Hello, " + playerName + "! Let's start the game...";
+        String greetingText = "Hello, " + playerName + "! Well, lets get ready for a life of Googling and AI's";
         TextTyping.printWithDelays(greetingText, true);
     }
 }
