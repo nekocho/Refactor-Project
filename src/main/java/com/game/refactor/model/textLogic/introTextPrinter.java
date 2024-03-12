@@ -1,4 +1,4 @@
-package textLogic;
+package com.game.refactor.model.textLogic;
 
 public class introTextPrinter {
     // Method to print a line with a slight delay

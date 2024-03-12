@@ -1,4 +1,4 @@
-package textLogic;
+package com.game.refactor.model.textLogic;
 
 import java.util.concurrent.TimeUnit;
 

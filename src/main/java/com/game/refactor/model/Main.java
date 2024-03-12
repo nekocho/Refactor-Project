@@ -1,7 +1,9 @@
-import gameIntro.IntroText;
-import gameIntro.StartGame;
-import gameLevels.introLevel;
-import textLogic.LoadingDots;
+package com.game.refactor.model;
+
+import com.game.refactor.model.gameIntro.IntroText;
+import com.game.refactor.model.gameIntro.StartGame;
+import com.game.refactor.model.gameLevels.introLevel;
+import com.game.refactor.model.textLogic.LoadingDots;
 
 public class Main {
     public static void main(String[] args) {

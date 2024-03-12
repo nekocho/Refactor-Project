@@ -1,7 +1,7 @@
-package gameLevels;
+package com.game.refactor.model.gameLevels;
 
-import textLogic.LoadingDots;
-import textLogic.TextTyping;
+import com.game.refactor.model.textLogic.LoadingDots;
+import com.game.refactor.model.textLogic.TextTyping;
 
 import java.util.Scanner;
 
