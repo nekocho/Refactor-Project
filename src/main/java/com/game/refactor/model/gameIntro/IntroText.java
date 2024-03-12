@@ -1,7 +1,7 @@
-package gameIntro;
+package com.game.refactor.model.gameIntro;
 
-import textLogic.introTextPrinter;
-import textLogic.TextTyping;
+import com.game.refactor.model.textLogic.introTextPrinter;
+import com.game.refactor.model.textLogic.TextTyping;
 
 public class IntroText {
     public static void displayGameName() throws InterruptedException {

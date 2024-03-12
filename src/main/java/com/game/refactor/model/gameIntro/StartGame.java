@@ -1,6 +1,6 @@
-package gameIntro;
+package com.game.refactor.model.gameIntro;
 
-import textLogic.TextTyping;
+import com.game.refactor.model.textLogic.TextTyping;
 
 import java.util.Scanner;
 

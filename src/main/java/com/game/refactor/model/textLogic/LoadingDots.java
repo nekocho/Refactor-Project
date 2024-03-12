@@ -1,4 +1,4 @@
-package textLogic;
+package com.game.refactor.model.textLogic;
 
 public class LoadingDots {
     public static void printLoadingDots(int dots) throws InterruptedException {
