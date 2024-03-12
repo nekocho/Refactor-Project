@@ -10,6 +10,7 @@ import com.game.refactor.model.gameIntro.IntroText;
 public class GameController {
     @GetMapping("/game")
     public String gamePage(Model model) throws InterruptedException {
+        model.addAttribute("gameName", IntroText.displayGameName());
         model.addAttribute("gameAuthor", IntroText.displayAuthorName());
         return "game";
     }
