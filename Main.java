@@ -12,6 +12,7 @@ public class Main {
             StartGame.promptToStartGame();
             LoadingDots.printLoadingDots(6);
             introLevel.start();
+
         } catch (InterruptedException e) {
             System.err.println("An error occurred while running the game: " + e.getMessage());
             e.printStackTrace();
