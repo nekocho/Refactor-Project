@@ -1,6 +1,6 @@
 package com.game.refactor.controller;
 
-import com.nekocho.adventuregame.model.Story;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class GameController {
         // Logic to start the game and initialize model attributes
         // For example:
         // Text for story:
-        model.addAttribute("gameText", Story.story);
+        model.addAttribute("gameText", "WELCOME!");
         // option buttons:
         model.addAttribute("choice1Label", "Choice 1");
         model.addAttribute("choice1Value", "c1");

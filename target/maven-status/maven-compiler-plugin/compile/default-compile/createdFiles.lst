@@ -1,3 +1,4 @@
+com/game/refactor/model/Story.class
 com/game/refactor/model/Main.class
 com/game/refactor/model/gameIntro/StartGame.class
 com/game/refactor/controller/HomeController.class
@@ -6,7 +7,9 @@ com/game/refactor/model/gameLevels/introLevel.class
 com/game/refactor/model/textLogic/LoadingDots.class
 com/game/refactor/model/gameLevels/levelOne.class
 com/game/refactor/RefactorApplication.class
+com/game/refactor/model/Game.class
 com/game/refactor/model/textLogic/introTextPrinter.class
 com/game/refactor/model/textLogic/TextTyping.class
 com/game/refactor/model/gameIntro/IntroText.class
+com/game/refactor/model/Player.class
 com/game/refactor/model/gameLevels/levelTwo.class

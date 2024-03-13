@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Main Game Play</title>
+    <title>The Illusionist's Gambit - Game</title>
+    <link rel="stylesheet" href="/main.css" />
 </head>
 <body>
-    <p th:text="${gameName}">Still trying1</p>
-    <p th:text="${gameAuthor}">Still trying</p>
+<div class="container">
+    <div class="player-stats">
+        <p th:text="'HP: ' + ${hp}" class="stats"></p>
+        <p th:text="'Weapon: ' + ${weaponName}" class="stats"></p>
+    </div>
+
+    <div class="typewriter-container">
+    <h1>REFACTOR</h1>
+    </div>
+
+    <div class="text-area">
+        <div class="typewriter" th:text="${gameText}"></div>
+    </div>
+
+    <div class="choice-buttons">
+        <form th:action="@{/choice}" method="post">
+            <button class="button" type="submit" th:text="${choice1Label}" name="choice" th:value="${choice1Value}"></button>
+            <button class="button" type="submit" th:text="${choice2Label}" name="choice" th:value="${choice2Value}"></button>
+            <button class="button" type="submit" th:text="${choice3Label}" name="choice" th:value="${choice3Value}"></button>
+            <button class="button" type="submit" th:text="${choice4Label}" name="choice" th:value="${choice4Value}"></button>
+        </form>
+    </div>
+
+</div>
 </body>
 </html>
