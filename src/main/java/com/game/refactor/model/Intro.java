@@ -1,9 +1,6 @@
 package com.game.refactor.model;
 
 public class Intro {
-
-    public static Object story;
-
     public static void main(String[] args){
         String simpleString = story();
         System.out.println(simpleString);

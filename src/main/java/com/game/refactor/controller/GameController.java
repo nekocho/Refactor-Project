@@ -2,6 +2,7 @@ package com.game.refactor.controller;
 
 
 import com.game.refactor.model.Intro;
+import com.game.refactor.model.Matt;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,13 @@ public class GameController {
             model.addAttribute("liftsText", Intro.lifts());
         return "lifts";
     }
+
+    @GetMapping("/bikeSheds")
+    public String sheds(Model model) {
+        model.addAttribute("shedsText", Matt.text());
+        return "matt";
+    }
+
 }
 
 //    @GetMapping("/start")
