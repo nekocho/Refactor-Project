@@ -20,13 +20,10 @@ public class GameController {
         return "intro";
     }
 
-    @PostMapping("/lifts")
+    @GetMapping("/lifts")
     public String next(Model model) {
-        if (nextClicked) {
             model.addAttribute("liftsText", Intro.lifts());
-            nextClicked = false;
-        }
-        return "game";
+        return "lifts";
     }
 }
 

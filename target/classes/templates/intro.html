@@ -17,15 +17,8 @@
         <div th:text="${gameText}"></div>
     </div>
 
-    <div class="choice-buttons">
-        <form th:action="@{/choice}" method="post">
-            <button class="button" type="submit" th:text="${choice1Label}" name="choice" th:value="${choice1Value}"></button>
-            <button class="button" type="submit" th:text="${choice2Label}" name="choice" th:value="${choice2Value}"></button>
-        </form>
-    </div>
-
     <div>
-        <form action="/lifts" method="post">
+        <form action="/lifts" method="get">
             <button class="start-button" type="submit">NEXT</button>
         </form>
     </div>

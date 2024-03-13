@@ -21,9 +21,8 @@ public class Intro {
     }
 
 
-
     public static String lifts(){
-        return "You're standing by a set of very confusing lifts. Do you choose to follow A) the tired person to your right, or B) the friendly person to your left?\n";
+        return "You're standing by a set of very confusing lifts. Do you choose to follow A) the tired person to your right, or B) the friendly person to your left?";
     }
 
 }
