@@ -1,6 +1,7 @@
 package com.game.refactor.controller;
 
 
+import com.game.refactor.model.BossOne;
 import com.game.refactor.model.Intro;
 import com.game.refactor.model.Matt;
 import com.game.refactor.model.Sabirah;
@@ -38,6 +39,11 @@ public class GameController {
     public String sabirah(Model model) {
         model.addAttribute("sabirahText", Sabirah.text());
         return "sabirah";
+    }
+    @GetMapping("/bossOne")
+    public String bossOne(Model model) {
+        model.addAttribute("bossOneText", BossOne.text());
+        return "bossOne";
     }
 
 }
