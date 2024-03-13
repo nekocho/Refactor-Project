@@ -1,6 +1,7 @@
 package com.game.refactor.controller;
 
 
+import com.game.refactor.model.Story;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,10 +13,8 @@ public class GameController {
 
     @GetMapping("/start")
     public String startGame(Model model) {
-        // Initialize default text
-        String defaultText = "Choose an option:";
         // Add default text to model
-        model.addAttribute("displayText", defaultText);
+        model.addAttribute("gameText", Story.story());
         // Return the name of the Thymeleaf template
         return "game";
     }
