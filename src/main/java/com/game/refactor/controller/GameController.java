@@ -17,7 +17,7 @@ public class GameController {
         // Add default text to model
         model.addAttribute("gameText", Intro.story());
         // Return the name of the Thymeleaf template
-        return "game";
+        return "intro";
     }
 
     @PostMapping("/lifts")
@@ -43,7 +43,7 @@ public class GameController {
 //        model.addAttribute("choice2Label", "Choice 2");
 //        model.addAttribute("choice2Value", "c2");
 //
-//        return "game"; // This will render game.html
+//        return "game"; // This will render intro.html
 //    }
 
 
