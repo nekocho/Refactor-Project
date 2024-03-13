@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+
+body {
+    background-color: #111;
+    padding: 100px;
+    color: white;
+    font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+    }
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100%;
+    overflow: auto;
+    }
+
+.title {
+    font-size: 35px;
+    }
+
+.text-area {
+    width: 600px;
+    height: 250px;
+    background: black;
+    overflow-y: auto;
+    }
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    }
+
+.start-button {
+    position: center;
+    display: flex;
+    margin: 0 auto; /* Center horizontally */
+    font-size: 20px; /* Increase font size */
+    padding: 15px 30px;
+    font-family: "VT323", monospace;
+}
+
+/* DEMO-SPECIFIC STYLES */
+
+.typewriter-container {
+    position: center;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100%;
+    overflow: auto;
+    }
+
+ .typewriter {
+   color: #fff;
+   font-family: monospace;
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+   border-right: .15em solid orange; /* The typwriter cursor */
+   white-space: nowrap; /* Keeps the content on a single line */
+   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   letter-spacing: .15em; /* Adjust as needed */
+   animation:
+     typing 3.5s steps(30, end),
+     blink-caret .5s step-end infinite;
+ }
+
+ /* The typing effect */
+ @keyframes typing {
+   from { width: 0 }
+   to { width: 100% }
+ }
+
+ /* The typewriter cursor effect */
+ @keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-color: orange }
+ }
+

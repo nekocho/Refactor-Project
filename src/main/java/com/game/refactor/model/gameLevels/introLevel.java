@@ -13,20 +13,17 @@ public class introLevel {
                 + "\n"
                 + "You walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, "
                 + "where a friendly face welcomes you with a warm smile. He introduces himself as Professor Liam and asks your name.";
-        TextTyping.printWithDelays(introText, true);
 
         // Ask user what their name is?
         String promptMessage = "So what is your name?: ";
-        TextTyping.printWithDelays(promptMessage, true);
 
         // This takes the user input.
         Scanner scanner = new Scanner(System.in);
         String playerName = scanner.nextLine();
 
-        LoadingDots.printLoadingDots(6);
 
         // Greeting with delays
         String greetingText = "Hello, " + playerName + "! Well, lets get ready for a life of Googling and AI's";
-        TextTyping.printWithDelays(greetingText, true);
+
     }
 }
