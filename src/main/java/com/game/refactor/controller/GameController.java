@@ -1,10 +1,7 @@
 package com.game.refactor.controller;
 
 
-import com.game.refactor.model.BossOne;
-import com.game.refactor.model.Intro;
-import com.game.refactor.model.Matt;
-import com.game.refactor.model.Sabirah;
+import com.game.refactor.model.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,6 +41,12 @@ public class GameController {
     public String bossOne(Model model) {
         model.addAttribute("bossOneText", BossOne.text());
         return "bossOne";
+    }
+
+    @GetMapping("/bossTwo")
+    public String bossTwo(Model model) {
+        model.addAttribute("bossTwoText", BossTwo.text());
+        return "bossTwo";
     }
 
 }
