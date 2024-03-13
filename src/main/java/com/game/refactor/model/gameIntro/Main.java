@@ -1,4 +1,4 @@
-package com.game.refactor.model;
+package com.game.refactor.model.gameIntro;
 
 import com.game.refactor.model.gameIntro.IntroText;
 import com.game.refactor.model.gameIntro.StartGame;

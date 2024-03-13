@@ -1,7 +1,7 @@
 package com.game.refactor.controller;
 
 
-import com.game.refactor.model.Story;
+import com.game.refactor.model.Intro;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,14 +10,25 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class GameController {
+    private boolean nextClicked = false;
 
     @GetMapping("/start")
     public String startGame(Model model) {
         // Add default text to model
-        model.addAttribute("gameText", Story.story());
+        model.addAttribute("gameText", Intro.story());
         // Return the name of the Thymeleaf template
         return "game";
     }
+
+    @PostMapping("/lifts")
+    public String next(Model model) {
+        if (nextClicked) {
+            model.addAttribute("liftsText", Intro.lifts());
+            nextClicked = false;
+        }
+        return "game";
+    }
+}
 
 //    @GetMapping("/start")
 //    public String startGame(Model model) {
@@ -35,11 +46,3 @@ public class GameController {
 //        return "game"; // This will render game.html
 //    }
 
-    @PostMapping("/choice")
-    public String handleChoice(@RequestParam("choice") String choice, Model model) {
-        // Logic to handle the player's choice
-        // Update game state and player stats
-        // Return the updated game page template
-        return "game"; // This will render game.html
-    }
-}
