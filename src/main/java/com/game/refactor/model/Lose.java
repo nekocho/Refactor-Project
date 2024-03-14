@@ -7,6 +7,6 @@ public class Lose {
     }
 
     public static String text(){
-        return "You leave with your shoulders slumped and your head hung low, trying to hide the tears.";
+        return "You look up at Professor Liam; he doesn't look mad, just disappointed. By this im guessing that wasn't the right answer.\n" + " \nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.";
     }
 }
