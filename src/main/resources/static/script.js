@@ -1,4 +1,3 @@
-
 // When the DOM content is fully loaded...
 document.addEventListener("DOMContentLoaded", function() {
     // Select all elements with the class "typewriter"
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Make the text visible before starting the typewriting effect by removing the "hidden" class
         textElement.classList.remove('hidden');
 
-        // Start the typewriter effect
-        typeWriter(text);
+        // Start the typewriter effect after a delay
+        setTimeout(() => typeWriter(text), 250);
     });
 });
