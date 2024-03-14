@@ -2,30 +2,20 @@
 
 body {
     background-color: #111;
-    padding: 100px;
     color: white;
-    font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
-    }
-
+    font-family: "VT323", monospace;;
+    padding: 20px;
+}
 .container {
-    position: relative;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    height: 100%;
-    overflow: auto;
-    }
-
-.title {
-    font-size: 35px;
-    }
-
+}
 .text-area {
-    width: 600px;
-    height: 250px;
+    width: 800px;
+    height: 300px;
     background: black;
-    overflow-y: auto;
-    }
+    overflow: hidden;
+}
 
 .button {
     background-color: black;
@@ -34,46 +24,55 @@ body {
     }
 
 .start-button {
-    position: center;
-    display: flex;
-    margin: 0 auto; /* Center horizontally */
-    font-size: 20px; /* Increase font size */
+    display: block;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    font-size: 20px;
     padding: 15px 30px;
+    font-family: monospace;
+}
+/*typewriter for story*/
+.typewriterIndex {
+    color: #fff;
     font-family: "VT323", monospace;
+    overflow: hidden;  /* Ensures the content is not revealed until the animation */
+    margin: 0 auto;  /* Gives that scrolling effect as the typing happens */
+    border-right: .15em solid green;
+    letter-spacing: .15em;  /* Adjust as needed */
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+    width: 0;  /* Ensures the text starts from the beginning */
+    animation-fill-mode: forwards;  /* Ensures the text stays after animation */
 }
 
-/* DEMO-SPECIFIC STYLES */
-
-.typewriter-container {
-    position: center;
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 20px;
-    height: 100%;
-    overflow: auto;
+.typewriter {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    letter-spacing: .15em;
+    white-space: pre-wrap;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes typing {
+    from {
+        width: 0;
     }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: green;
+    }
+}
 
- .typewriter {
-   color: #fff;
-   font-family: monospace;
-   overflow: hidden; /* Ensures the content is not revealed until the animation */
-   border-right: .15em solid green; /* The typewriter cursor */
-   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-   letter-spacing: .15em; /* Adjust as needed */
-   animation:
-     typing 3.5s steps(30, end),
-     blink-caret .5s step-end infinite;
- }
 
- /* The typing effect */
- @keyframes typing {
-   from { width: 0 }
-   to { width: 100% }
- }
 
- /* The typewriter cursor effect */
- @keyframes blink-caret {
-   from, to { border-color: transparent }
-   50% { border-color: orange }
- }
+
 
