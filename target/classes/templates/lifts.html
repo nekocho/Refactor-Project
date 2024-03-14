@@ -14,15 +14,19 @@
     </div>
 
     <div class="text-area">
-        <div th:text="${gameText}"></div>
+        <div th:text="${liftsText}"></div>
     </div>
 
     <div class="choice-buttons">
-        <form th:action="@{/choice}" method="post">
-            <button class="button" type="submit" th:text="${choice1Label}" name="choice" th:value="${choice1Value}"></button>
-            <button class="button" type="submit" th:text="${choice2Label}" name="choice" th:value="${choice2Value}"></button>
+        <form action="/sabirah" method="get">
+            <button class="button" type="submit" >Option A</button>
+        </form>
+
+        <form action="/bikeSheds" method="get">
+            <button class="button" type="submit" >Option B</button>
         </form>
     </div>
+
 </div>
 </body>
 </html>

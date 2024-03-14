@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>REFACTOR: An Apprentice Journey</title>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+<div class="container">
+
+
+    <div class="typewriter-container">
+        <h1>REFACTOR</h1>
+    </div>
+
+    <div class="text-area">
+        <div th:text="${bossOneText}"></div>
+    </div>
+
+    <div class="choice-buttons">
+        <form action="/lose" method="get">
+            <button class="button" type="submit" >Option A</button>
+        </form>
+
+        <form action="/lose" method="get">
+            <button class="button" type="submit" >Option B</button>
+        </form>
+
+        <form action="/lose" method="get">
+            <button class="button" type="submit" >Option C</button>
+        </form>
+
+        <form action="/bossTwo" method="get">
+            <button class="button" type="submit" >Option D</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
