@@ -19,8 +19,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 textElement.textContent += text.charAt(i);
                 // Increment the index to move to the next character
                 i++;
+                // Check if the current character is a punctuation mark
+                const currentChar = text.charAt(i - 1);
+                let timeout;
+                // Set the timeout based on the type of punctuation mark
+                if (/[.,\/#!$%\^&\*;:{}=\_`~()?]/.test(currentChar)) {
+                    timeout = currentChar === ',' ? 100 : 250; // Change speed for commas
+                } else {
+                    timeout = 50; // Default typing speed for non-punctuation characters
+                }
                 // Schedule the next iteration of the typewriter effect after a delay
-                setTimeout(() => typeWriter(text, i), 50);
+                setTimeout(() => typeWriter(text, i), timeout);
             }
         }
 

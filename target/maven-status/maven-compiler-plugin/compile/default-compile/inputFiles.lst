@@ -1,17 +1,17 @@
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameIntro/IntroText.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/controller/GameController.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameIntro/StartGame.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Intro.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/BossOne.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/RefactorApplication.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/textLogic/LoadingDots.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameIntro/Main.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Sabirah.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/BossTwo.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Lose.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/textLogic/introTextPrinter.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/controller/HomeController.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameLevels/introLevel.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/textLogic/TextTyping.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Win.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Matt.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/controller/HomeController.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/LoadingDots.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/Lose.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/Sabirah.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/BossTwo.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/introTextPrinter.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/Main.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/BossOne.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/TextTyping.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/RefactorApplication.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/Matt.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/Win.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/controller/GameController.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/IntroText.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/Intro.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/StartGame.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameLevels/introLevel.java
