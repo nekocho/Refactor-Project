@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class GameController {
     private boolean nextClicked = false;
 
-    @GetMapping("/start")
+    @GetMapping("/intro")
     public String startGame(Model model) {
         // Add default text to model
         model.addAttribute("gameText", Intro.story());

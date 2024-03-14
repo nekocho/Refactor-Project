@@ -7,9 +7,10 @@ public class BossOne {
     }
 
     public static String text(){
-        return "Professor Liam: Ah, there you are! Welcome, pet. Been waiting for ya.\n" +
+        return "Professor Liam: Ah, there you are! Alreet pet. Been waiting for ya.\n" +
                 "\n" +
                 "Now, let's quiz you on Engineering to see if you're cut out for this Apprenticeship." +
+                "\n" +
                 "\n" +
                 "Which of the following is NOT a fundamental data type in Python?\n" +
                 "\n" +

@@ -9,6 +9,8 @@ public class BossTwo {
     public static String text(){
         return "Well done, that's correct!\n" +
                 "\n" +
+                "Lets move onto your next question shall we?\n" +
+                "\n" +
                 "Which AWS service is used for scalable computing capacity in the cloud?\n" +
                 "\n" +
                 "A) Amazon S3\n" +
