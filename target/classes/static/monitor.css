@@ -20,6 +20,13 @@
     border-image-outset: 0;
     overflow: hidden;
 }
+
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: -1; /* Set a lower z-index to push the lines to the back */
+    /* Other scanline styles */
+}
 /* The screen itself + border */
 #crt,
 pre {
