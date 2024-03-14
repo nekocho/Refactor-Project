@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>REFACTOR: An Apprentice Journey</title>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+<div class="container">
+
+
+    <div class="typewriter-container">
+        <h1>REFACTOR</h1>
+    </div>
+
+    <div class="text-area">
+        <div th:text="${loseText}"></div>
+    </div>
+
+    <div>
+        <form action="/lifts" method="get">
+            <button class="start-button" type="submit">RESTART GAME</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

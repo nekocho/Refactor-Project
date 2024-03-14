@@ -49,7 +49,20 @@ public class GameController {
         return "bossTwo";
     }
 
+    @GetMapping("/win")
+    public String win(Model model) {
+        model.addAttribute("winText", Win.text());
+        return "win";
+    }
+
+    @GetMapping("/lose")
+    public String lose(Model model) {
+        model.addAttribute("loseText", Lose.text());
+        return "lose";
+    }
 }
+
+
 
 //    @GetMapping("/start")
 //    public String startGame(Model model) {
