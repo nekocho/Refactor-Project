@@ -21,10 +21,11 @@ body {
     }
 
 .text-area {
-    width: 600px;
-    height: 250px;
+    width: 800px;
+    height: 300px;
     background: black;
-    overflow-y: auto;
+    min-height: 1em; /* Adjust the height as needed */
+    overflow: hidden;
     }
 
 .button {
@@ -53,11 +54,25 @@ body {
     overflow: auto;
     }
 
-.typewriter {
+/*Typewriter for titlepage*/
+.typewriter1 {
     color: #fff;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid green; /* The typewriter cursor */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+    width: 0; /* Ensures the text starts from the beginning */
+    animation-fill-mode: forwards; /* Ensures the text stays after animation */
+}
+
+/*typewriter for story*/
+.typewriter {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     white-space: pre-wrap;
@@ -83,5 +98,6 @@ body {
         border-color: green;
     }
 }
+
 
 
