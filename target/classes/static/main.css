@@ -16,6 +16,14 @@ body {
     background: black;
     overflow: hidden;
 }
+.refactor-title {
+    text-align: center;
+    font-size: 200%;
+}
+
+.refactor-title h1 {
+    color: #00FF00; /* Use a green color reminiscent of old retro art computers */
+}
 
 .button {
     background-color: black;
