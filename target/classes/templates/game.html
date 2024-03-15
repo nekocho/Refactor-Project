@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <title>REFACTOR: An Apprentice Journey</title>
     <link rel="stylesheet" href="/main.css" />
+    <script src="/script.js"></script>
 </head>
 <body>
 <div class="container">
 
 
-    <div class="typewriter-container">
+    <div class="refactor-title">
         <h1>REFACTOR</h1>
     </div>
 
     <div class="text-area">
-        <div th:text="${gameText}"></div>
+        <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
-    <div class="choice-buttons">
-        <form th:action="@{/choice}" method="post">
-            <button class="button" type="submit" th:text="${choice1Label}" name="choice" th:value="${choice1Value}"></button>
-            <button class="button" type="submit" th:text="${choice2Label}" name="choice" th:value="${choice2Value}"></button>
+    <div th:each="choice, choiceStat : ${choices}">
+        <form method="post" action="/choice">
+            <input type="hidden" name="index" th:value="${choiceStat.index}" /> <!-- Adding a hidden input field to pass the index value -->
+            <button type="submit" name="choice" th:value="${choices[choiceStat.index]}" th:text="${choice}">
+                <span th:text="${choices[choiceStat.index]}"></span>
+            </button>
         </form>
     </div>
+
 </div>
 </body>
 </html>
