@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.game.refactor.model.Story;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class GameController {
@@ -25,5 +27,12 @@ public class GameController {
         return "game";
     }
 
-
+    @PostMapping("/choice")
+    public String handleChoice(@RequestParam("choice") String choice, Model model) {
+        // Handle user choice and update the story
+        story.selectPosition(choice);
+        model.addAttribute("mainTextArea", story.getMainText());
+        model.addAttribute("choices", story.getCurrentChoices());
+        return "game";
+    }
 }

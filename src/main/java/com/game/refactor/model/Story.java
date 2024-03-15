@@ -48,8 +48,9 @@ public class Story {
             case "intro":
                 intro();
                 break;
-           // case "Start Your Adventure":
-
+            case "Start Your Adventure":
+                lifts();
+                break;
         }
     }
 
@@ -58,4 +59,8 @@ public class Story {
         setChoices(Arrays.asList("Start Your Adventure"));
     }
 
+    public void lifts(){
+        setMainText("You're standing by a set of very confusing lifts. Do you choose to follow: \n\nA) The tired person to your right? \nB) The friendly person to your left?");
+        setChoices(Arrays.asList("A) The tired person to your right", "B) The friendly person to your left"));
+    }
 }
