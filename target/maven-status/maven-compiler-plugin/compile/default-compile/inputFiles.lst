@@ -1,19 +1,11 @@
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameIntro/IntroText.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/controller/GameController.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameIntro/StartGame.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/controller/GameControllerOld.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Intro.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/BossOne.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/RefactorApplication.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/textLogic/LoadingDots.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameIntro/Main.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Sabirah.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/BossTwo.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Lose.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/textLogic/introTextPrinter.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Story.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/controller/HomeController.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/gameLevels/introLevel.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/textLogic/TextTyping.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Win.java
-/Users/zoe/Desktop/Final Project/src/main/java/com/game/refactor/model/Matt.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/controller/GameController.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/controller/HomeController.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/IntroText.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/introTextPrinter.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/StartGame.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/Story.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/LoadingDots.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/TextTyping.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/RefactorApplication.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/Main.java
+/Users/iangriffiths/MakersOct2023/Projects/Refactor-Project/src/main/java/com/game/refactor/model/gameLevels/introLevel.java

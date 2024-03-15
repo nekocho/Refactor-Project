@@ -19,15 +19,17 @@
     <div class="text-area">
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
-
 <!-- Choice Buttons-->
-    <div th:each="choice, choiceStat : ${choices}">
-        <form method="post" action="/choice">
-            <input type="hidden" name="index" th:value="${choiceStat.index}" /> <!-- Adding a hidden input field to pass the index value -->
-            <button type="submit" name="choice" th:value="${choices[choiceStat.index]}" th:text="${choice}">
-                <span th:text="${choices[choiceStat.index]}"></span>
-            </button>
-        </form>
+    <div class="buttonWrapper">
+        <div class="buttonContainer" th:each="choice, choiceStat : ${choices}">
+            <form method="post" action="/choice">
+                <input type="hidden" name="index" th:value="${choiceStat.index}" /> <!-- Adding a hidden input field to pass the index value -->
+                <button class="optionButton" type="submit" name="choice" th:value="${choices[choiceStat.index]}" th:text="${choice}">
+                    <span th:text="${choices[choiceStat.index]}"></span>
+                </button>
+            </form>
+        </div>
+
     </div>
 </div>
 
