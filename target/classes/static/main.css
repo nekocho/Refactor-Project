@@ -8,28 +8,49 @@ body {
     font-family: "VT323", monospace;
     padding: 20px;
 }
+
+/*Container for Game.HTML*/
+
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
+
+/*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
     height: 300px;
     background: black;
     overflow: hidden;
+    padding: 20px;
 }
+
+/*Title Styling for Game.HTML*/
 .refactor-title {
     text-align: center;
     font-size: 200%;
-}
-
-.refactor-title h1 {
     color: #00FF00; /* Use a green color reminiscent of old retro art computers */
 }
 
+/*Styling for Index.HTML*/
+/*Index Screen size and positioning - textShadow animation and color*/
 .terminal {
+    position: relative;
+    text-transform: uppercase;
+    animation: textShadow 4s infinite;
+    color: limegreen;
+    text-shadow: 0 0 5px #c8c8c8;
     text-align: center;
+    padding: 50px;
 }
+.terminal h1 {
+    font-size: 80px;
+}
+
+.terminal h1, h2 {
+    line-height: 0; /* Adjust the value as needed */
+}
+/*Start Button Styling*/
 
 .button * {
     box-sizing: border-box;
@@ -98,29 +119,12 @@ body {
     color: black;
 }
 
-
-/*.button {*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*    font-size: 20px;*/
-/*}*/
-
-/*.start-button {*/
-/*    display: block;*/
-/*    margin: 20px auto;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*    font-size: 20px;*/
-/*    padding: 15px 30px;*/
-/*    font-family: monospace;*/
-/*}*/
-/*typewriter for story*/
+/*Typewriter for Index.HTML*/
 .typewriterIndex {
     color: #fff;
     font-family: "VT323", monospace;
     overflow: hidden;  /* Ensures the content is not revealed until the animation */
     margin: 0 auto;  /* Gives that scrolling effect as the typing happens */
-    border-right: .15em solid green;
     letter-spacing: .15em;  /* Adjust as needed */
     white-space: nowrap;
     animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
@@ -132,71 +136,9 @@ body {
 .typewriter {
     color: #fff;
     font-family: monospace;
-    font-size: 14px;
     overflow: hidden;
     letter-spacing: .15em;
     white-space: pre-wrap;
     animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
     animation-fill-mode: forwards;
 }
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: green;
-    }
-}
-
-/*typewriter for index page*/
-.typewriterIndex {
-    color: #fff;
-    font-family: "VT323", monospace;
-    overflow: hidden;  /* Ensures the content is not revealed until the animation */
-    margin: 0 auto;  /* Gives that scrolling effect as the typing happens */
-    border-right: .15em solid green;
-    letter-spacing: .15em;  /* Adjust as needed */
-    white-space: nowrap;
-    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
-    width: 0;  /* Ensures the text starts from the beginning */
-    animation-fill-mode: forwards;  /* Ensures the text stays after animation */
-}
-
-.typewriter {
-    color: #fff;
-    font-family: monospace;
-    overflow: hidden;
-    letter-spacing: .15em;
-    white-space: pre-wrap;
-    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
-    animation-fill-mode: forwards;
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: green;
-    }
-}
-
-
-
-
-

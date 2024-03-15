@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <title>REFACTOR: An Apprentice Journey</title>
     <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/animation.css" />
     <script src="/script.js"></script>
 </head>
 <body>
+
 <div class="container">
-
-
+<!--    Heading-->
     <div class="refactor-title">
         <h1>REFACTOR</h1>
     </div>
 
+<!--Text Window Area-->
     <div class="text-area">
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
+<!-- Choice Buttons-->                        
     <div class="buttonWrapper">
         <div class="buttonContainer" th:each="choice, choiceStat : ${choices}">
             <form method="post" action="/choice">
@@ -26,8 +29,9 @@
                 </button>
             </form>
         </div>
-    </div>
 
+    </div>
 </div>
+
 </body>
 </html>
