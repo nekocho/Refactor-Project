@@ -45,11 +45,26 @@ public class Story {
     // Method to map choices to methods
     public void selectPosition(String nextPosition) {
         switch (nextPosition) {
-            case "intro":
+            case "intro", "Restart Game":
                 intro();
                 break;
             case "Start Your Adventure":
                 lifts();
+                break;
+            case "A) The tired person":
+                tiredPerson();
+                break;
+            case "B) The friendly person":
+                friendlyPerson();
+                break;
+            case "See Professor Liam":
+                bossOne();
+                break;
+            case "D) Array":
+                bossTwo();
+                break;
+            case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda":
+                gameOver();
                 break;
         }
     }
@@ -62,5 +77,30 @@ public class Story {
     public void lifts(){
         setMainText("You're standing by a set of very confusing lifts. Do you choose to follow: \n\nA) The tired person to your left? \nB) The friendly person to your right?");
         setChoices(Arrays.asList("A) The tired person", "B) The friendly person"));
+    }
+
+    public void tiredPerson(){
+        setMainText("Sabirah: Excuse me, are you the new apprentice?\n\nProfessor Liam asked me to keep an eye out for you. He's been expecting you.\n\nProfessor Liam is quite influential around here. You're in for a treat.");
+        setChoices(Arrays.asList("See Professor Liam"));
+    }
+
+    public void friendlyPerson(){
+        setMainText("Matt: Hey there! You heading down to the bike sheds, too? Follow me!\n\nYou get into a conversation with Matt in the lifts and he regales you with stories of his marathon training. You die of boredom.\n\n\nGAME OVER");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+
+    public void bossOne(){
+        setMainText("Professor Liam: Ah, there you are! Alreet pet. Been waiting for ya.\n\nNow, let's quiz you on Engineering to see if you're cut out for this Apprenticeship.\n\nWhich of the following is NOT a fundamental data type in Python?\n\nA) Integer\nB) String\nC) Boolean\nD) Array\n\nChoose the correct answer.");
+        setChoices(Arrays.asList("A) Integer", "B) String", "C) Boolean", "D) Array"));
+    }
+
+    public void bossTwo(){
+        setMainText("Well done, that's correct!\n\nLets move onto your next question shall we?\n\nWhich AWS service is used for scalable computing capacity in the cloud?\n\nA) Amazon S3\nB) Amazon EC2\nC) Amazon RDS\nD) Amazon Lambda\n\nChoose the correct answer.");
+        setChoices(Arrays.asList("A) Amazon S3", "B) Amazon EC2", "C) Amazon RDS", "D) Amazon Lambda"));
+    }
+
+    public void gameOver(){
+        setMainText();
+        setChoices(Arrays.asList());
     }
 }
