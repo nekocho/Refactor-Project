@@ -63,6 +63,29 @@ body {
     background: #00FF00;
 }
 
+.buttonWrapper {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    margin-top: 40px;
+    width: 100%; /* Ensure the wrapper takes up full width */
+}
+
+.buttonContainer {
+    display: inline-grid;
+    width: 100%; /* Take up the full width */
+}
+
+.optionButton {
+    padding: 1rem 2rem;
+    background: #d0333a;
+    margin-bottom: .5rem;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
 
 /*.button {*/
 /*    background-color: black;*/
@@ -93,6 +116,7 @@ body {
     animation-fill-mode: forwards;  /* Ensures the text stays after animation */
 }
 
+/*typewriter for story*/
 .typewriter {
     color: #fff;
     font-family: monospace;
@@ -119,13 +143,7 @@ body {
     }
 }
 
-
-
-
-
-
-
-/*typewriter for story*/
+/*typewriter for index page*/
 .typewriterIndex {
     color: #fff;
     font-family: "VT323", monospace;
