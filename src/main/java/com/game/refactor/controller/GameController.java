@@ -1,83 +1,42 @@
 package com.game.refactor.controller;
 
-
-import com.game.refactor.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import com.game.refactor.model.Story;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class GameController {
-    private boolean nextClicked = false;
+    // Create the story
+    private Story story = new Story();
 
-    @GetMapping("/intro")
-    public String startGame(Model model) {
-        // Add default text to model
-        model.addAttribute("gameText", Intro.story());
-        // Return the name of the Thymeleaf template
-        return "intro";
+    @Autowired
+    public GameController(Story story) {
+        this.story = story;
     }
 
-    @GetMapping("/lifts")
-    public String next(Model model) {
-            model.addAttribute("liftsText", Intro.lifts());
-        return "lifts";
+    @GetMapping("/start")
+    public String index(Model model) {
+        // Initializing the game and pass initial data to Thymeleaf
+        story.selectPosition("intro"); //Start the story
+        model.addAttribute("mainTextArea", story.getMainText());
+        model.addAttribute("choices", story.getCurrentChoices());
+        return "game";
     }
 
-    @GetMapping("/bikeSheds")
-    public String sheds(Model model) {
-        model.addAttribute("shedsText", Matt.text());
-        return "matt";
-    }
-
-    @GetMapping("/sabirah")
-    public String sabirah(Model model) {
-        model.addAttribute("sabirahText", Sabirah.text());
-        return "sabirah";
-    }
-    @GetMapping("/bossOne")
-    public String bossOne(Model model) {
-        model.addAttribute("bossOneText", BossOne.text());
-        return "bossOne";
-    }
-
-    @GetMapping("/bossTwo")
-    public String bossTwo(Model model) {
-        model.addAttribute("bossTwoText", BossTwo.text());
-        return "bossTwo";
-    }
-
-    @GetMapping("/win")
-    public String win(Model model) {
-        model.addAttribute("winText", Win.text());
-        return "win";
-    }
-
-    @GetMapping("/lose")
-    public String lose(Model model) {
-        model.addAttribute("loseText", Lose.text());
-        return "lose";
+    @PostMapping("/choice")
+    public String handleChoice(@RequestParam("choice") String choice, Model model) {
+        // Handle user choice and update the story
+        String nextPage = story.selectPosition(choice);
+        if (nextPage.equals("redirect:/")) {
+            return nextPage; // Redirect to start page (index.html)
+        }
+        // Update UI data based on story progression
+        model.addAttribute("mainTextArea", story.getMainText());
+        model.addAttribute("choices", story.getCurrentChoices());
+        return "game"; // Display the game page
     }
 }
-
-
-
-//    @GetMapping("/start")
-//    public String startGame(Model model) {
-//        // Logic to start the game and initialize model attributes
-//        // For example:
-//        // Text for story:
-//        model.addAttribute("gameText", "Story goes here.");
-//        // option buttons:
-//        model.addAttribute("choice1Label", "Choice 1");
-//        model.addAttribute("choice1Value", "c1");
-//
-//        model.addAttribute("choice2Label", "Choice 2");
-//        model.addAttribute("choice2Value", "c2");
-//
-//        return "game"; // This will render intro.html
-//    }
-
-
