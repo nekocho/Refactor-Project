@@ -30,9 +30,13 @@ public class GameController {
     @PostMapping("/choice")
     public String handleChoice(@RequestParam("choice") String choice, Model model) {
         // Handle user choice and update the story
-        story.selectPosition(choice);
+        String nextPage = story.selectPosition(choice);
+        if (nextPage.equals("redirect:/")) {
+            return nextPage; // Redirect to start page (index.html)
+        }
+        // Update UI data based on story progression
         model.addAttribute("mainTextArea", story.getMainText());
         model.addAttribute("choices", story.getCurrentChoices());
-        return "game";
+        return "game"; // Display the game page
     }
 }

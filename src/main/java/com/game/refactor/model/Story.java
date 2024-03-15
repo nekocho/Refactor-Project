@@ -43,7 +43,7 @@ public class Story {
     }
 
     // Method to map choices to methods
-    public void selectPosition(String nextPosition) {
+    public String selectPosition(String nextPosition) {
         switch (nextPosition) {
             case "intro", "Restart Game":
                 intro();
@@ -66,7 +66,14 @@ public class Story {
             case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda":
                 gameOver();
                 break;
+            case "B) Amazon EC2":
+                win();
+                break;
+            case "Start Again":
+                // Handle any necessary tasks before redirecting
+                return "redirect:/"; // Special return value indicating a redirect
         }
+        return nextPosition;
     }
 
     public void intro(){
@@ -100,7 +107,12 @@ public class Story {
     }
 
     public void gameOver(){
-        setMainText();
-        setChoices(Arrays.asList());
+        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this im guessing that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+
+    public void win(){
+        setMainText("That's correct! You seem to have what it takes to be an apprentice here at Banana Inc! Welcome to your first day...");
+        setChoices(Arrays.asList("Start Again"));
     }
 }
