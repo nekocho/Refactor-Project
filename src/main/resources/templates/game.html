@@ -20,7 +20,6 @@
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
-    </div>
 <!-- Choice Buttons-->
     <div th:each="choice, choiceStat : ${choices}">
         <form method="post" action="/choice">
@@ -30,7 +29,7 @@
             </button>
         </form>
     </div>
-
+</div>
 
 </body>
 </html>
