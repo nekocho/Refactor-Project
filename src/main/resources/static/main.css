@@ -93,6 +93,7 @@ body {
     animation-fill-mode: forwards;  /* Ensures the text stays after animation */
 }
 
+/*typewriter for story*/
 .typewriter {
     color: #fff;
     font-family: monospace;
@@ -119,13 +120,7 @@ body {
     }
 }
 
-
-
-
-
-
-
-/*typewriter for story*/
+/*typewriter for index page*/
 .typewriterIndex {
     color: #fff;
     font-family: "VT323", monospace;
