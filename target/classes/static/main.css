@@ -66,13 +66,12 @@ body {
 .buttonWrapper {
     display: flex;
     justify-content: center; /* Center the buttons horizontally */
-    align-items: center; /* Center the buttons vertically */
     margin-top: 40px;
-    width: 100%; /* Ensure the wrapper takes up full width */
 }
 
 .buttonContainer {
-    display: inline-grid;
+    display: flex; /* Change to flex to make buttons align in a single line */
+    justify-content: center; /* Center the buttons horizontally */
     width: 100%; /* Take up the full width */
 }
 
@@ -86,6 +85,7 @@ body {
     color: #fff;
     cursor: pointer;
 }
+
 
 /*.button {*/
 /*    background-color: black;*/

@@ -66,26 +66,26 @@ body {
 .buttonWrapper {
     display: flex;
     justify-content: center; /* Center the buttons horizontally */
-    align-items: center; /* Center the buttons vertically */
     margin-top: 40px;
-    padding-inline-start: 65px; /* Add padding here */
 }
 
 .buttonContainer {
-    display: inline-grid;
+    display: flex; /* Change to flex to make buttons align in a single line */
+    justify-content: center; /* Center the buttons horizontally */
     width: 100%; /* Take up the full width */
 }
 
 .optionButton {
-    padding:1rem 2rem;
-    background:#d0333a;
-    margin-bottom:.5rem;
-    text-align:center;
+    padding: 1rem 2rem;
+    background: #d0333a;
+    margin-bottom: .5rem;
+    text-align: center;
     border: none;
-    border-radius:6px;
-    color:#fff;
-    cursor:pointer;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
 }
+
 
 /*.button {*/
 /*    background-color: black;*/
