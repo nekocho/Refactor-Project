@@ -5,7 +5,7 @@
 body {
     background-color: #111;
     color: white;
-    font-family: "VT323", monospace;;
+    font-family: "VT323", monospace;
     padding: 20px;
 }
 .container {
@@ -61,6 +61,7 @@ body {
 .button button:focus,
 .button button:hover {
     background: #00FF00;
+    color: black;
 }
 
 .buttonWrapper {
@@ -76,14 +77,25 @@ body {
 }
 
 .optionButton {
-    padding: 1rem 2rem;
-    background: #d0333a;
-    margin-bottom: .5rem;
-    text-align: center;
-    border: none;
-    border-radius: 6px;
-    color: #fff;
+    background: #BCBCBC;
+    align-items: center;
+    border-bottom: 6px inset rgba(0, 0, 0, .5);
+    border-left: 6px inset rgba(0, 0, 0, .5);
+    border-right: 6px inset rgba(255, 255, 255, .5);
+    border-top: 6px inset rgba(255, 255, 255, .5);
+    box-sizing: border-box;
+    color: white;
     cursor: pointer;
+    font-family: monospace;
+    font-size: 14px;
+    margin: 1rem;
+    padding: .5rem;
+    width: auto;
+}
+
+.optionButton:hover {
+    background: #00FF00;
+    color: black;
 }
 
 
@@ -120,6 +132,7 @@ body {
 .typewriter {
     color: #fff;
     font-family: monospace;
+    font-size: 14px;
     overflow: hidden;
     letter-spacing: .15em;
     white-space: pre-wrap;
