@@ -8,17 +8,19 @@
     <script src="/script.js"></script>
 </head>
 <body>
+
 <div class="container">
-
-
+<!--    Heading-->
     <div class="refactor-title">
         <h1>REFACTOR</h1>
     </div>
 
+<!--Text Window Area-->
     <div class="text-area">
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
+<!-- Choice Buttons-->
     <div th:each="choice, choiceStat : ${choices}">
         <form method="post" action="/choice">
             <input type="hidden" name="index" th:value="${choiceStat.index}" /> <!-- Adding a hidden input field to pass the index value -->
@@ -29,5 +31,6 @@
     </div>
 
 </div>
+
 </body>
 </html>

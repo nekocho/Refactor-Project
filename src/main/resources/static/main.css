@@ -8,17 +8,15 @@ body {
     font-family: "VT323", monospace;;
     padding: 20px;
 }
+
+/*Container for Game.HTML*/
+
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.buttonContainer {
-    display: inline-grid;
-    justify-content: space-between;
-
-}
-
+/*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
     height: 300px;
@@ -27,12 +25,15 @@ body {
     padding: 20px;
 }
 
+/*Title Styling for Game.HTML*/
 .refactor-title {
     text-align: center;
     font-size: 200%;
     color: #00FF00; /* Use a green color reminiscent of old retro art computers */
 }
 
+/*Styling for Index.HTML*/
+/*Index Screen size and positioning - textShadow animation and color*/
 .terminal {
     position: relative;
     height: 100%;
@@ -46,6 +47,8 @@ body {
     text-shadow: 0 0 5px #c8c8c8;
     text-align: center;
 }
+
+/*Start Button Styling*/
 
 .button * {
     box-sizing: border-box;
@@ -79,7 +82,7 @@ body {
     background: #00FF00;
 }
 
-/*typewriter for story*/
+/*Typewriter for Index.HTML*/
 .typewriterIndex {
     color: #fff;
     font-family: "VT323", monospace;
@@ -93,6 +96,7 @@ body {
     animation-fill-mode: forwards;  /* Ensures the text stays after animation */
 }
 
+/*typewriter for story*/
 .typewriter {
     color: #fff;
     font-family: monospace;
@@ -101,20 +105,4 @@ body {
     white-space: pre-wrap;
     animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
     animation-fill-mode: forwards;
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: green;
-    }
 }

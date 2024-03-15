@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 
+/*Styling for rounded window on index*/
 #monitor {
     margin: 3vmin auto;
     padding: 5.5vmin;
@@ -11,6 +12,7 @@
     border-radius: 0.5rem;
 }
 
+/*Styling for smaller window for lines on index*/
 #crt {
     min-width: 80ch; /* This makes 80 monospace characters fit on the screen */
     height: calc(80ch * 0.8);
