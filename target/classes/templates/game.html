@@ -5,6 +5,7 @@
     <title>REFACTOR: An Apprentice Journey</title>
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/animation.css" />
+    <link rel="stylesheet" href="/window.css" />
     <script src="/script.js"></script>
 </head>
 <body>
@@ -14,12 +15,25 @@
     <div class="refactor-title">
         <h1>REFACTOR</h1>
     </div>
+<!--    Terminal Window styling-->
+    <div class="window space shadow">
+        <div class="top">
+            <div class="btns">
+                <span class="circle red"></span>
+                <span class="circle yellow"></span>
+                <span class="circle green"></span>
+            </div>
+            <div class="window-title">bash -- 70x32</div>
+        </div>
 
 <!--Text Window Area-->
+        <pre class="body">
     <div class="text-area">
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
+    </pre>
+    </div>
 <!-- Choice Buttons-->
     <div th:each="choice, choiceStat : ${choices}">
         <form method="post" action="/choice">

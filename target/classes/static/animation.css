@@ -173,6 +173,7 @@
     }
 }
 
+/*Animation for typewriter*/
 @keyframes typing {
     from {
         width: 0;

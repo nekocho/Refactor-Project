@@ -36,18 +36,20 @@ body {
 /*Index Screen size and positioning - textShadow animation and color*/
 .terminal {
     position: relative;
-    height: 100%;
-    padding: 2rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-    word-break: break-word;
     text-transform: uppercase;
     animation: textShadow 4s infinite;
     color: limegreen;
     text-shadow: 0 0 5px #c8c8c8;
     text-align: center;
+    padding: 50px;
+}
+.terminal h1 {
+    font-size: 80px;
 }
 
+.terminal h1, h2 {
+    line-height: 0; /* Adjust the value as needed */
+}
 /*Start Button Styling*/
 
 .button * {
@@ -88,7 +90,6 @@ body {
     font-family: "VT323", monospace;
     overflow: hidden;  /* Ensures the content is not revealed until the animation */
     margin: 0 auto;  /* Gives that scrolling effect as the typing happens */
-    border-right: .15em solid green;
     letter-spacing: .15em;  /* Adjust as needed */
     white-space: nowrap;
     animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;

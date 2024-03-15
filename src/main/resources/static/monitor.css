@@ -14,7 +14,7 @@
 
 /*Styling for smaller window for lines on index*/
 #crt {
-    min-width: 80ch; /* This makes 80 monospace characters fit on the screen */
+    min-width: 80ch;
     height: calc(80ch * 0.8);
     font-size: max(
     1rem,
@@ -50,21 +50,6 @@
     z-index: 0;
     pointer-events: none;
     animation: fadeIn 2s;
-}
-
-body.fullscreen #crt {
-    font-size: 2.5rem;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 999;
-}
-
-::selection {
-    background: var(--color);
-    color: var(--bg);
-    text-shadow: none;
 }
 
 /* Scanline animation moving top to bottom over the screen */
