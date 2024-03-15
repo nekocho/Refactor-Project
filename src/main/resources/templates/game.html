@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <title>REFACTOR: An Apprentice Journey</title>
     <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/animation.css" />
     <script src="/script.js"></script>
 </head>
 <body>
+
 <div class="container">
-
-
+<!--    Heading-->
     <div class="refactor-title">
         <h1>REFACTOR</h1>
     </div>
 
+<!--Text Window Area-->
     <div class="text-area">
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
+    </div>
+<!-- Choice Buttons-->
     <div th:each="choice, choiceStat : ${choices}">
         <form method="post" action="/choice">
             <input type="hidden" name="index" th:value="${choiceStat.index}" /> <!-- Adding a hidden input field to pass the index value -->
@@ -27,6 +31,6 @@
         </form>
     </div>
 
-</div>
+
 </body>
 </html>
