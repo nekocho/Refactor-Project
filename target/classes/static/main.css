@@ -90,7 +90,45 @@ body {
     justify-content: center; /* Center the buttons horizontally */
     margin-top: 40px;
 }
+/* Toggle index page */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.toggle-checkbox {
+    display: none; /* Hide the actual checkbox */
+}
+
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 17px;
+}
+
+.toggle-label::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+    transform: translateX(26px);
+}
+
+
+/* Options buttons */
 .buttonContainer {
     display: flex; /* Change to flex to make buttons align in a single line */
     justify-content: center; /* Center the buttons horizontally */
@@ -133,6 +171,7 @@ body {
 }
 
 /*typewriter for story*/
+
 .typewriter {
     color: #fff;
     font-family: monospace;
