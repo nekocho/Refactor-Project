@@ -45,31 +45,37 @@ public class Story {
     // Method to map choices to methods
     public String selectPosition(String nextPosition) {
         switch (nextPosition) {
-            case "intro", "Restart Game":
+            case "intro", "Restart Game": //Intro
                 intro();
                 break;
-            case "Start Your Adventure":
+            case "Start Your Adventure": //Lift section
                 lifts();
                 break;
-            case "A) The tired person":
-                tiredPerson();
+            case "A) The tired person": // Lift Option A
+                personA();
                 break;
-            case "B) The friendly person":
-                friendlyPerson();
+            case "B) The friendly person": // Lift Option B
+                personB();
                 break;
-            case "See Professor Liam":
+            case "C) Yusur": // Lift Option C
+                personC();
+                break;
+            case "D) Zoe": // Lift Option D
+                personD();
+                break;
+            case "See Professor Liam": // Final Boss
                 bossOne();
                 break;
-            case "D) Array":
+            case "D) Array": // Question 1 Correct Answer
                 bossTwo();
                 break;
-            case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda":
+            case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda": // Incorrect Answers
                 gameOver();
                 break;
-            case "B) Amazon EC2":
+            case "B) Amazon EC2": // Question 2 Correct Answer
                 win();
                 break;
-            case "Start Again":
+            case "Start Again": // Start again
                 // Handle any necessary tasks before redirecting
                 return "redirect:/"; // Special return value indicating a redirect
         }
@@ -83,17 +89,27 @@ public class Story {
 
     public void lifts(){
         setMainText("You're standing by a set of very confusing lifts. Do you choose to follow: \n\nA) The tired person to your left? \nB) The friendly person to your right?");
-        setChoices(Arrays.asList("A) The tired person", "B) The friendly person"));
+        setChoices(Arrays.asList("A) The tired person", "B) The friendly person", "C) Yusur", "D) Zoe" ));
     }
 
-    public void tiredPerson(){
+    public void personA(){
         setMainText("Sabirah: Excuse me, are you the new apprentice?\n\nProfessor Liam asked me to keep an eye out for you. He's been expecting you.\n\nProfessor Liam is quite influential around here. You're in for a treat.");
         setChoices(Arrays.asList("See Professor Liam"));
     }
 
-    public void friendlyPerson(){
+    public void personB(){
         setMainText("Matt: Hey there! You heading down to the bike sheds, too? Follow me!\n\nYou get into a conversation with Matt in the lifts and he regales you with stories of his marathon training. You die of boredom.\n\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
+    }
+
+    public void personC(){
+        setMainText("Yusur - Cafeteria with pizza or sushi");
+        setChoices(Arrays.asList("Pizza", "Sushi"));
+    }
+
+    public void personD(){
+        setMainText("Zoe - Welcome us into Lobby and show her favourite two spots - the couches and the roof garden. Which would you like to visit?");
+        setChoices(Arrays.asList("Couches", "Roof Garden"));
     }
 
     public void bossOne(){
