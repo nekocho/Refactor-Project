@@ -129,7 +129,7 @@ public class Story {
     }
 
     public void personC(){
-        setMainText("Yusur: Hey, I am feeling real hungry, do you know what your having for lunch. Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?");
+        setMainText("Yusur: Hey, I am feeling real hungry, do you know what you're having for lunch. Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?");
         setChoices(Arrays.asList("Order Pizza", "Order Sushi"));
     }
 
