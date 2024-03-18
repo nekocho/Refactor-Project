@@ -60,6 +60,12 @@ public class Story {
             case "C) Yusur": // Lift Option C
                 personC();
                 break;
+            case "Sushi": // Sushi Death
+                gameOverSushi();
+                break;
+            case "Pizza": // Sushi Death
+                pizza();
+                break;
             case "D) Zoe": // Lift Option D
                 personD();
                 break;
@@ -70,7 +76,7 @@ public class Story {
                 bossTwo();
                 break;
             case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda": // Incorrect Answers
-                gameOver();
+                gameOverLiam();
                 break;
             case "B) Amazon EC2": // Question 2 Correct Answer
                 win();
@@ -107,6 +113,11 @@ public class Story {
         setChoices(Arrays.asList("Pizza", "Sushi"));
     }
 
+    public void pizza(){
+        setMainText("Mohamed - Networking; Takes you to Liam");
+        setChoices(Arrays.asList("See Professor Liam"));
+    }
+
     public void personD(){
         setMainText("Zoe - Welcome us into Lobby and show her favourite two spots - the couches and the roof garden. Which would you like to visit?");
         setChoices(Arrays.asList("Couches", "Roof Garden"));
@@ -122,10 +133,17 @@ public class Story {
         setChoices(Arrays.asList("A) Amazon S3", "B) Amazon EC2", "C) Amazon RDS", "D) Amazon Lambda"));
     }
 
-    public void gameOver(){
+    public void gameOverLiam(){
         setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this I'm guessing that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
+
+    public void gameOverSushi(){
+        setMainText("You poop your pants and throw up at the same time- bad sushi, go home.");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+
+
 
     public void win(){
         setMainText("That's correct! You seem to have what it takes to be an apprentice here at Banana Inc! Welcome to your first day...");
