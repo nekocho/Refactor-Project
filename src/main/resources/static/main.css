@@ -128,7 +128,7 @@ body {
     height: 100%; /* Setting height to match container */
     left: 0%; /* Initial position */
     border-radius:20px; /* Adding border radius */
-    background: white; /* Background color */
+    background: #00FF00; /* Background color */
     transition: all 0.3s; /* Adding transition for smooth animation */
 }
 
