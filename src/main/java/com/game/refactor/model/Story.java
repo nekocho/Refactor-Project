@@ -85,11 +85,11 @@ public class Story {
             case "Look at View":
                 lookAtView();
                 break;
-            case "Sit on Grass":
-                sitOnGrass();
+            case "Join Picnic":
+                joinPicnic();
                 break;
 
-            case "See Professor Liam": // Final Boss
+            case "See Professor Liam", "Next": // Final Boss
                 bossOne();
                 break;
             case "D) Array": // Question 1 Correct Answer
@@ -143,31 +143,32 @@ public class Story {
         setChoices(Arrays.asList("Sit on Couches", "Go Outside"));
     }
     public void couches(){
-        setMainText("Take a seat on the couch - Callum sits next to you and introduces himself. Star Wars question?");
+        setMainText("As you settle onto the couch, you find yourself next to Callum, whose hair seems to shift between hues of pink and blonde with remarkable speed. He immediately turns to you and inquires, 'Are you a Star Wars fan? Quick, tell me, what's the color of Luke Skywalker's lightsaber in Return of the Jedi?'");
         setChoices(Arrays.asList("Green", "Blue"));
-    }
-    public void outside(){
-        setMainText("Jocelyn - Asks if you'd like to take a look at the view or sit on the grass");
-        setChoices(Arrays.asList("Look at View", "Sit on Grass"));
-    }
-
-    public void lookAtView(){
-        setMainText("You look up and the amazing landscapes, only for a flock of birds to unload their bowls all over you.");
-        setChoices(Arrays.asList("Restart Game"));
-    }
-    public void sitOnGrass(){
-        setMainText("You head over to the grassy area and spot professor Liam having a picnic. You make friends and invites you back to his office.");
-        setChoices(Arrays.asList("See Professor Liam"));
     }
 
     public void lightsaberGreen(){
-        setMainText("Correct answer, i like you. I'll take to Liam");
+        setMainText("That's the correct answer, I like you. I'll take you to Liam");
         setChoices(Arrays.asList("See Professor Liam"));
     }
     public void lightsaberBlue(){
-        setMainText("Wrong, call yourself a nerd? Go home.");
+        setMainText("Wrong, call yourself a nerd? Go home.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
+    public void outside(){
+        setMainText("You walk outside and come across another Banana apprentice who introduces herself as Jocelyn.\nJocelyn mentions that she's been meaning to check out the view across the Thames and asks if you'd like to take a look at the view with her. Do you:\n\nA) Check out the view with Jocelyn?\nB) Politely decline as you've seen a picnic you would like to join instead?");
+        setChoices(Arrays.asList("Look at View", "Join Picnic"));
+    }
+
+    public void lookAtView(){
+        setMainText("As you gaze across the breathtaking landscapes to the Knightsgate office, your moment of awe is abruptly interrupted as a flock of birds decides to drop their digested lunch over you. Feeling less than lucky, you decide to go home to change.\n\nGAME OVER");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+    public void joinPicnic(){
+        setMainText("You head over to the grassy area and spot a very important-looking man having a picnic. He looks up as you approach and begins to speak...");
+        setChoices(Arrays.asList("Next"));
+    }
+
     public void bossOne(){
         setMainText("Professor Liam: Ah, there you are! Alreet pet. Been waiting for ya.\n\nNow, let's quiz you on Engineering to see if you're cut out for this Apprenticeship.\n\nWhich of the following is NOT a fundamental data type in Python?\n\nA) Integer\nB) String\nC) Boolean\nD) Array\n\nChoose the correct answer.");
         setChoices(Arrays.asList("A) Integer", "B) String", "C) Boolean", "D) Array"));
