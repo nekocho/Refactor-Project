@@ -51,22 +51,22 @@ public class Story {
             case "Start Your Adventure": //Lift section
                 lifts();
                 break;
-            case "A) The tired person": // Lift Option A
+            case "Enter Lift A": // Lift Option A
                 personA();
                 break;
-            case "B) The friendly person": // Lift Option B
+            case "Enter Lift B": // Lift Option B
                 personB();
                 break;
-            case "C) Yusur": // Lift Option C
+            case "Enter Lift C": // Lift Option C
                 personC();
                 break;
-            case "Sushi": // Sushi Death
+            case "Order Sushi": // Sushi Death
                 gameOverSushi();
                 break;
-            case "Pizza": // Sushi Death
+            case "Order Pizza": // Sushi Death
                 pizza();
                 break;
-            case "D) Zoe": // Lift Option D
+            case "Enter Lift D": // Lift Option D
                 personD();
                 break;
             case "Sit on Couches": // Couches - takes you to Callum
@@ -81,6 +81,14 @@ public class Story {
             case "Blue": // Lightsaber question - incorrect answer
                 lightsaberBlue();
                 break;
+
+            case "Look at View":
+                lookAtView();
+                break;
+            case "Sit on Grass":
+                sitOnGrass();
+                break;
+
             case "See Professor Liam": // Final Boss
                 bossOne();
                 break;
@@ -106,8 +114,8 @@ public class Story {
     }
 
     public void lifts(){
-        setMainText("You're standing by a set of very confusing lifts. Do you choose to follow: \n\nA) The tired person to your left? \nB) The friendly person to your right?");
-        setChoices(Arrays.asList("A) The tired person", "B) The friendly person", "C) Yusur", "D) Zoe" ));
+        setMainText("You're standing by a set of very confusing lifts. You notice a variety of other people also waiting for the lifts, with no idea where to go, Which lift would you enter amidst the confusion? \n\nA) Someone is discussing an EC2 instance on the phone.\nB) A person is dressed in full running gear.\nC) Someone seems to be browsing a food menu on their phone.\nD) Another person is wearing headphones and appears excited for the day.");
+        setChoices(Arrays.asList("Enter Lift A", "Enter Lift B", "Enter Lift C", "Enter Lift D" ));
     }
 
     public void personA(){
@@ -121,17 +129,17 @@ public class Story {
     }
 
     public void personC(){
-        setMainText("Yusur - Cafeteria with pizza or sushi");
-        setChoices(Arrays.asList("Pizza", "Sushi"));
+        setMainText("Yusur: Hey, I am feeling real hungry, do you know what your having for lunch. Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?");
+        setChoices(Arrays.asList("Order Pizza", "Order Sushi"));
     }
 
     public void pizza(){
-        setMainText("Mohamed - Networking; Takes you to Liam");
+        setMainText("While waiting for your Pizza you meet Mohamed who tells you he has been networking all morning. One of the people he met was Professor Liam, kind of a big deal. He recommends that you meet him.");
         setChoices(Arrays.asList("See Professor Liam"));
     }
 
     public void personD(){
-        setMainText("Zoe - Welcome us into Lobby and show her favourite two spots - the couches and the roof garden. Which would you like to visit?");
+        setMainText("Zoe: Hey! Are you new around here, would you like to see my favorite spots in the building?\n\nWhere would you like to go?");
         setChoices(Arrays.asList("Sit on Couches", "Go Outside"));
     }
     public void couches(){
@@ -140,8 +148,18 @@ public class Story {
     }
     public void outside(){
         setMainText("Jocelyn - Asks if you'd like to take a look at the view or sit on the grass");
-        setChoices(Arrays.asList("View", "Grass"));
+        setChoices(Arrays.asList("Look at View", "Sit on Grass"));
     }
+
+    public void lookAtView(){
+        setMainText("You look up and the amazing landscapes, only for a flock of birds to unload their bowls all over you.");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+    public void sitOnGrass(){
+        setMainText("You head over to the grassy area and spot professor Liam having a picnic. You make friends and invites you back to his office.");
+        setChoices(Arrays.asList("See Professor Liam"));
+    }
+
     public void lightsaberGreen(){
         setMainText("Correct answer, i like you. I'll take to Liam");
         setChoices(Arrays.asList("See Professor Liam"));
@@ -166,7 +184,7 @@ public class Story {
     }
 
     public void gameOverSushi(){
-        setMainText("You poop your pants and throw up at the same time- bad sushi, go home.");
+        setMainText("Oh No!\n\nThe discounted sushi was a terrible idea.\n\nYou spend the rest of the day in the bathroom.");
         setChoices(Arrays.asList("Restart Game"));
     }
 
