@@ -69,6 +69,18 @@ public class Story {
             case "D) Zoe": // Lift Option D
                 personD();
                 break;
+            case "Sit on Couches": // Couches - takes you to Callum
+                couches();
+                break;
+            case "Go Outside": // Outside - take you to Jocelyn
+                outside();
+                break;
+            case "Green": // Lightsaber question - correct answer
+                lightsaberGreen();
+                break;
+            case "Blue": // Lightsaber question - incorrect answer
+                lightsaberBlue();
+                break;
             case "See Professor Liam": // Final Boss
                 bossOne();
                 break;
@@ -120,9 +132,24 @@ public class Story {
 
     public void personD(){
         setMainText("Zoe - Welcome us into Lobby and show her favourite two spots - the couches and the roof garden. Which would you like to visit?");
-        setChoices(Arrays.asList("Couches", "Roof Garden"));
+        setChoices(Arrays.asList("Sit on Couches", "Go Outside"));
     }
-
+    public void couches(){
+        setMainText("Take a seat on the couch - Callum sits next to you and introduces himself. Star Wars question?");
+        setChoices(Arrays.asList("Green", "Blue"));
+    }
+    public void outside(){
+        setMainText("Jocelyn - Asks if you'd like to take a look at the view or sit on the grass");
+        setChoices(Arrays.asList("View", "Grass"));
+    }
+    public void lightsaberGreen(){
+        setMainText("Correct answer, i like you. I'll take to Liam");
+        setChoices(Arrays.asList("See Professor Liam"));
+    }
+    public void lightsaberBlue(){
+        setMainText("Wrong, call yourself a nerd? Go home.");
+        setChoices(Arrays.asList("Restart Game"));
+    }
     public void bossOne(){
         setMainText("Professor Liam: Ah, there you are! Alreet pet. Been waiting for ya.\n\nNow, let's quiz you on Engineering to see if you're cut out for this Apprenticeship.\n\nWhich of the following is NOT a fundamental data type in Python?\n\nA) Integer\nB) String\nC) Boolean\nD) Array\n\nChoose the correct answer.");
         setChoices(Arrays.asList("A) Integer", "B) String", "C) Boolean", "D) Array"));
