@@ -19,7 +19,7 @@ body {
 /*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
-    height: 300px;
+    height: 350px;
     background: black;
     overflow: hidden;
     padding: 20px;
@@ -41,7 +41,7 @@ body {
     color: limegreen;
     text-shadow: 0 0 5px #c8c8c8;
     text-align: center;
-    padding: 50px;
+    padding: 30px;
 }
 .terminal h1 {
     font-size: 80px;
@@ -91,40 +91,86 @@ body {
     margin-top: 40px;
 }
 /* Toggle index page */
-.toggle-container {
+/* Centering the content vertically and horizontally within the body */
+body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    height: 100vh;
 }
 
-.toggle-checkbox {
-    display: none; /* Hide the actual checkbox */
+/* Styling for the text color of the toggle question */
+.toggleQuestion {
+    color: white;
 }
 
-.toggle-label {
+/* Styling for the toggle container */
+.toggleContainer {
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    background-color: #ccc;
-    border-radius: 17px;
+    display: grid; /* Using CSS grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Creating two columns of equal width */
+    width: fit-content; /* Adjusting width to fit content */
+    border: 3px solid #343434; /* Adding border */
+    border-radius: 20px; /* Adding border radius */
+    background: #343434; /* Background color */
+    font-weight: bold; /* Bold text */
+    text-shadow: none; /* Removing text shadow */
+    color: #343434; /* Text color */
+    cursor: pointer; /* Changing cursor to pointer on hover */
+    margin: 0 auto; /* Centering horizontally */
 }
 
-.toggle-label::before {
-    content: '';
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background-color: white;
-    top: 4px;
-    left: 4px;
-    transition: transform 0.3s ease;
+/* Styling for the pseudo-element that represents the toggle switch */
+.toggleContainer::before {
+    content: ''; /* Adding content to pseudo-element */
+    position: absolute; /* Positioning the pseudo-element absolutely */
+    width: 50%; /* Setting initial width to 50% */
+    height: 100%; /* Setting height to match container */
+    left: 0%; /* Initial position */
+    border-radius:20px; /* Adding border radius */
+    background: white; /* Background color */
+    transition: all 0.3s; /* Adding transition for smooth animation */
 }
 
-.toggle-checkbox:checked + .toggle-label::before {
-    transform: translateX(26px);
+/* Styling for the toggle switch when checked */
+.toggleCheckbox:checked + .toggleContainer::before {
+    left: 50%; /* Move the pseudo-element to the right */
+}
+
+/* Styling for the div elements inside the toggle container */
+.toggleContainer div {
+    padding: 6px; /* Adding padding */
+    text-align: center; /* Centering text horizontally */
+    z-index: 1; /* Adding z-index */
+}
+
+/* Styling for the toggle checkbox */
+.toggleCheckbox {
+    display: none; /* Hiding the checkbox */
+}
+
+/* Styling for the first child div when toggle is checked */
+.toggleCheckbox:checked + .toggleContainer div:first-child{
+    color: white; /* Changing text color */
+    transition: color 0.3s; /* Adding transition */
+}
+
+/* Styling for the last child div when toggle is checked */
+.toggleCheckbox:checked + .toggleContainer div:last-child{
+    color: #343434; /* Changing text color */
+    transition: color 0.3s; /* Adding transition */
+}
+
+/* Styling for the first child div when toggle is not checked */
+.toggleCheckbox + .toggleContainer div:first-child{
+    color: #343434; /* Changing text color */
+    transition: color 0.3s; /* Adding transition */
+}
+
+/* Styling for the last child div when toggle is not checked */
+.toggleCheckbox + .toggleContainer div:last-child{
+    color: white; /* Changing text color */
+    transition: color 0.3s; /* Adding transition */
 }
 
 
