@@ -133,6 +133,7 @@ body {
 }
 
 /*typewriter for story*/
+
 .typewriter {
     color: #fff;
     font-family: monospace;
@@ -141,4 +142,10 @@ body {
     white-space: pre-wrap;
     animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
     animation-fill-mode: forwards;
+}
+
+.secretButton {
+    background-color: black;
+    border:none;
+    opacity: 0.2;
 }

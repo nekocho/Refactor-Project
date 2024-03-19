@@ -31,14 +31,12 @@
         </div>
 
     </div>
+
         <form method="post" action="/choice">
             <input type="hidden" name="index" th:value="${secretButton}" /> <!-- Adding a hidden input field to pass the index value -->
             <button class="secretButton" type="submit" name="choice" th:value="${secretButton}">
             </button>
         </form>
-    </div>
-
-
-
+</div>
 </body>
 </html>

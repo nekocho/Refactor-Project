@@ -75,6 +75,12 @@ public void setSecretButton(String secretButton){ this.secretButton = secretButt
             case "B) Amazon EC2":
                 win();
                 break;
+            case "1974", "1977", "1979":
+                secretGameOver();
+                break;
+            case "1976":
+                keys();
+                break;
             case "Start Again":
                 // Handle any necessary tasks before redirecting
                 return "redirect:/"; // Special return value indicating a redirect
@@ -129,6 +135,11 @@ public void setSecretButton(String secretButton){ this.secretButton = secretButt
     public void secretButton(){
         setMainText("What year was Apple founded?");
         setChoices(Arrays.asList("1974","1976", "1977", "1979"));
+    }
+
+    public void secretGameOver(){
+        setMainText("GAME OVER");
+        setChoices(Arrays.asList("Start Again"));
     }
 
     public void keys(){
