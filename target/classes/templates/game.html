@@ -18,9 +18,11 @@
     <!-- Text Window Area -->
     <div class="text-area">
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
+        <div class="sr-only" th:text="${mainTextArea}"></div>
     </div>
 
-<!-- Choice Buttons-->                        
+
+    <!-- Choice Buttons -->
     <div class="buttonWrapper">
         <div class="buttonContainer" th:each="choice, choiceStat : ${choices}">
             <form method="post" action="/choice">
