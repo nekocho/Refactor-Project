@@ -234,6 +234,4 @@ body {
     overflow: hidden;
     letter-spacing: .15em;
     white-space: pre-wrap;
-    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
-    animation-fill-mode: forwards;
 }

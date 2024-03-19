@@ -5,7 +5,7 @@
     <title>REFACTOR: An Apprentice Journey</title>
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/animation.css" />
-    <script src="/script.js" defer></script>
+    <script src="/script.js"></script>
 </head>
 <body>
 
@@ -16,8 +16,8 @@
     </div>
 
     <!-- Text Window Area -->
-    <div id="textAreaContainer" class="text-area">
-        <div class="typewriter" th:text="${mainTextArea}"></div>
+    <div class="text-area">
+        <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
     <!-- Choice Buttons -->
