@@ -8,6 +8,8 @@
     <script src="/script.js"></script>
 </head>
 <body>
+<!--Set animation true or false for JS-->
+<input type="hidden" id="animationsEnabled" th:value="${animationsEnabled}" />
 
 <div class="container">
     <!-- Heading -->
@@ -20,7 +22,7 @@
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
     </div>
 
-<!-- Choice Buttons-->                        
+    <!-- Choice Buttons -->
     <div class="buttonWrapper">
         <div class="buttonContainer" th:each="choice, choiceStat : ${choices}">
             <form method="post" action="/choice">
