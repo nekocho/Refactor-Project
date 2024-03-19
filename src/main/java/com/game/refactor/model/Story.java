@@ -13,6 +13,8 @@ public class Story {
     // Display choices as a list
     private List<String> choices;
 
+    private String secretButton;
+
     //SETTERS
 
     // Construct the Story
@@ -30,6 +32,8 @@ public class Story {
         this.choices = choices;
     }
 
+public void setSecretButton(String secretButton){ this.secretButton = secretButton;}
+
     // GETTERS
 
     // Method to get the main text
@@ -41,6 +45,8 @@ public class Story {
     public List<String> getCurrentChoices(){
         return choices;
     }
+
+    public String getSecretButton() { return secretButton; }
 
     // Method to map choices to methods
     public String selectPosition(String nextPosition) {
@@ -72,6 +78,9 @@ public class Story {
             case "Start Again":
                 // Handle any necessary tasks before redirecting
                 return "redirect:/"; // Special return value indicating a redirect
+            case "Hidden Button":
+                secretButton();
+
         }
         return nextPosition;
     }
@@ -79,6 +88,7 @@ public class Story {
     public void intro(){
         setMainText("As the sun rises over the sprawling campus of Banana Inc., A new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile. He hands you your ID and ushers you through the gates to the lifts.\n\nWith determination in your eyes and ambition in your heart, you embark on your journey as an Banana apprentice. The road ahead may be challenging, but with perseverance and passion, you know that you have the opportunity to make a difference in the world of technology.\n\nWelcome to Banana Inc. Your adventure starts now...");
         setChoices(Arrays.asList("Start Your Adventure"));
+        setSecretButton("Hidden Button");
     }
 
     public void lifts(){
@@ -114,5 +124,14 @@ public class Story {
     public void win(){
         setMainText("That's correct! You seem to have what it takes to be an apprentice here at Banana Inc! Welcome to your first day...");
         setChoices(Arrays.asList("Start Again"));
+    }
+
+    public void secretButton(){
+        setMainText("What year was Apple founded?");
+        setChoices(Arrays.asList("1974","1976", "1977", "1979"));
+    }
+
+    public void keys(){
+        setMainText("CONGRATULATIONS, YOU FOUND THE SECRET BUTTON AND PASSED THE TEST. YOU NOW OWN THE COMPANY.");
     }
 }
