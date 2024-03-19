@@ -85,8 +85,8 @@ public class Story {
             case "Look at View":
                 lookAtView();
                 break;
-            case "Join Picnic":
-                joinPicnic();
+            case "Have Picnic":
+                havePicnic();
                 break;
 
             case "See Professor Liam", "Next": // Final Boss
@@ -109,12 +109,12 @@ public class Story {
     }
 
     public void intro(){
-        setMainText("As the sun rises over the sprawling campus of Banana Inc., A new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile. He hands you your ID and ushers you through the gates to the lifts.\n\nWith determination in your eyes and ambition in your heart, you embark on your journey as an Banana apprentice. The road ahead may be challenging, but with perseverance and passion, you know that you have the opportunity to make a difference in the world of technology.\n\nWelcome to Banana Inc. Your adventure starts now...");
+        setMainText("As the sun rises over the sprawling campus of Banana Inc., a new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile. He hands you your ID and ushers you through the gates to the lifts.\n\nWith determination in your eyes and ambition in your heart, you embark on your journey as an Banana apprentice. The road ahead may be challenging, but with perseverance and passion, you know that you have the opportunity to make a difference in the world of technology.\n\nWelcome to Banana Inc. Your adventure starts now...");
         setChoices(Arrays.asList("Start Your Adventure"));
     }
 
     public void lifts(){
-        setMainText("You're standing by a set of very confusing lifts. You notice a variety of other people also waiting for the lifts, with no idea where to go, Which lift would you enter amidst the confusion? \n\nA) Someone is discussing an EC2 instance on the phone.\nB) A person is dressed in full running gear.\nC) Someone seems to be browsing a food menu on their phone.\nD) Another person is wearing headphones and appears excited for the day.");
+        setMainText("You're standing by a set of very confusing lifts. You notice a variety of other people entering each lift, with no idea where to go, which lift would you like to enter? \n\nA) Someone is discussing an EC2 instance on the phone.\nB) A person is dressed in full running gear.\nC) Someone seems to be browsing a food menu on their phone.\nD) Another person is wearing headphones and appears excited for the day.");
         setChoices(Arrays.asList("Enter Lift A", "Enter Lift B", "Enter Lift C", "Enter Lift D" ));
     }
 
@@ -129,7 +129,7 @@ public class Story {
     }
 
     public void personC(){
-        setMainText("Yusur: Hey, I am feeling real hungry, do you know what you're having for lunch. Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?");
+        setMainText("Yusur: Hey, I am feeling real hungry, do you know what you're having for lunch? Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?\n\nA) Order Pizza\nB) Order Sushi");
         setChoices(Arrays.asList("Order Pizza", "Order Sushi"));
     }
 
@@ -139,7 +139,7 @@ public class Story {
     }
 
     public void personD(){
-        setMainText("Zoe: Hey! Are you new around here, would you like to see my favorite spots in the building?\n\nWhere would you like to go?");
+        setMainText("Zoe: Hey! You look new around here. Would you like to see some of the best spots in the building?\n\nWhere would you like to go?\n\nA) Sit on Couches\nB) Go Outside");
         setChoices(Arrays.asList("Sit on Couches", "Go Outside"));
     }
     public void couches(){
@@ -148,25 +148,25 @@ public class Story {
     }
 
     public void lightsaberGreen(){
-        setMainText("That's the correct answer, I like you. I'll take you to Liam");
+        setMainText("Callum: That's the correct answer, I like you. I'd like to introduce you to another nerd, his name is Professor Liam.");
         setChoices(Arrays.asList("See Professor Liam"));
     }
     public void lightsaberBlue(){
-        setMainText("Wrong, call yourself a nerd? Go home.\n\nGAME OVER");
+        setMainText("Callum: Wrong, call yourself a nerd? Go home.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
     public void outside(){
-        setMainText("You walk outside and come across another Banana apprentice who introduces herself as Jocelyn.\nJocelyn mentions that she's been meaning to check out the view across the Thames and asks if you'd like to take a look at the view with her. Do you:\n\nA) Check out the view with Jocelyn?\nB) Politely decline as you've seen a picnic you would like to join instead?");
-        setChoices(Arrays.asList("Look at View", "Join Picnic"));
+        setMainText("You walk outside and come across another Banana apprentice who introduces herself as Jocelyn.\n\nJocelyn mentions that she's been meaning to check out the view across the Thames and asks if you'd like to take a look at the view with her. Do you:\n\nA) Check out the view with Jocelyn?\nB) Politely decline as you're starting to feel a bit peckish and your Boots Meal Deal picnic is calling your name.");
+        setChoices(Arrays.asList("Look at View", "Have Picnic"));
     }
 
     public void lookAtView(){
         setMainText("As you gaze across the breathtaking landscapes to the Knightsgate office, your moment of awe is abruptly interrupted as a flock of birds decides to drop their digested lunch over you. Feeling less than lucky, you decide to go home to change.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
-    public void joinPicnic(){
-        setMainText("You head over to the grassy area and spot a very important-looking man having a picnic. He looks up as you approach and begins to speak...");
-        setChoices(Arrays.asList("Next"));
+    public void havePicnic(){
+        setMainText("You head over to the grassy area and sit down to eat your picnic. Just as you've finished laying out your Boots Meal Deal someone rushes over to you.\n\nPerson: Oh! There you are! We've been looking for you, Professor Liam has been expecting you.");
+        setChoices(Arrays.asList("See Professor Liam"));
     }
 
     public void bossOne(){
@@ -180,12 +180,12 @@ public class Story {
     }
 
     public void gameOverLiam(){
-        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this I'm guessing that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER");
+        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this you guess that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
 
     public void gameOverSushi(){
-        setMainText("Oh No!\n\nThe discounted sushi was a terrible idea.\n\nYou spend the rest of the day in the bathroom.");
+        setMainText("Oh No!\n\nThe discounted sushi was a terrible idea.\n\nYou spend the rest of the day in the bathroom.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
 
