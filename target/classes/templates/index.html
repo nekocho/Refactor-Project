@@ -28,6 +28,13 @@
                 <div class="button">
                     <form action="/start" method="get">
                         <button class="start-button" type="submit">ENTER HERE</button>
+                        <p class="toggleQuestion">Would you like to switch on animations?</p>
+                        <div class="sr-only">We would recommend leaving animations off for screen readers</div>
+                        <input name="animationsEnabled" type="checkbox" id="toggle" class="toggleCheckbox" />
+                        <label for="toggle" class='toggleContainer' role="switch">
+                            <div>No</div>
+                            <div>Yes</div>
+                        </label>
                     </form>
                 </div>
                 <p>A Game By Callum, Matt, Sabirah and Zoe</p>
