@@ -13,6 +13,8 @@ public class Story {
     // Display choices as a list
     private List<String> choices;
 
+    private String secretButton;
+
     //SETTERS
 
     // Construct the Story
@@ -30,6 +32,8 @@ public class Story {
         this.choices = choices;
     }
 
+public void setSecretButton(String secretButton){ this.secretButton = secretButton;}
+
     // GETTERS
 
     // Method to get the main text
@@ -42,58 +46,143 @@ public class Story {
         return choices;
     }
 
+    public String getSecretButton() { return secretButton; }
+
     // Method to map choices to methods
     public String selectPosition(String nextPosition) {
         switch (nextPosition) {
-            case "intro", "Restart Game":
+            case "intro", "Restart Game": //Intro
                 intro();
                 break;
-            case "Start Your Adventure":
+            case "Start Your Adventure": //Lift section
                 lifts();
                 break;
-            case "A) The tired person":
-                tiredPerson();
+            case "Enter Lift A": // Lift Option A
+                personA();
                 break;
-            case "B) The friendly person":
-                friendlyPerson();
+            case "Enter Lift B": // Lift Option B
+                personB();
                 break;
-            case "See Professor Liam":
+            case "Enter Lift C": // Lift Option C
+                personC();
+                break;
+            case "Order Sushi": // Sushi Death
+                gameOverSushi();
+                break;
+            case "Order Pizza": // Sushi Death
+                pizza();
+                break;
+            case "Enter Lift D": // Lift Option D
+                personD();
+                break;
+            case "Sit on Couches": // Couches - takes you to Callum
+                couches();
+                break;
+            case "Go Outside": // Outside - take you to Jocelyn
+                outside();
+                break;
+            case "Green": // Lightsaber question - correct answer
+                lightsaberGreen();
+                break;
+            case "Blue": // Lightsaber question - incorrect answer
+                lightsaberBlue();
+                break;
+
+            case "Look at View":
+                lookAtView();
+                break;
+            case "Have Picnic":
+                havePicnic();
+                break;
+
+            case "See Professor Liam", "Next": // Final Boss
                 bossOne();
                 break;
-            case "D) Array":
+            case "D) Array": // Question 1 Correct Answer
                 bossTwo();
                 break;
-            case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda":
-                gameOver();
+            case "A) Integer", "B) String", "C) Boolean", "A) Amazon S3", "C) Amazon RDS", "D) Amazon Lambda": // Incorrect Answers
+                gameOverLiam();
                 break;
-            case "B) Amazon EC2":
+            case "B) Amazon EC2": // Question 2 Correct Answer
                 win();
+                break;
+            case "1974", "1977", "1979":
+                secretGameOver();
+                break;
+            case "1976":
+                keys();
                 break;
             case "Start Again":
                 // Handle any necessary tasks before redirecting
                 return "redirect:/"; // Special return value indicating a redirect
+            case "Hidden Button":
+                secretButton();
+
         }
         return nextPosition;
     }
 
     public void intro(){
-        setMainText("As the sun rises over the sprawling campus of Banana Inc., A new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile. He hands you your ID and ushers you through the gates to the lifts.\n\nWith determination in your eyes and ambition in your heart, you embark on your journey as an Banana apprentice. The road ahead may be challenging, but with perseverance and passion, you know that you have the opportunity to make a difference in the world of technology.\n\nWelcome to Banana Inc. Your adventure starts now...");
+        setMainText("As the sun rises over the sprawling campus of Banana Inc., a new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile. He hands you your ID and ushers you through the gates to the lifts.\n\nWith determination in your eyes and ambition in your heart, you embark on your journey as an Banana apprentice. The road ahead may be challenging, but with perseverance and passion, you know that you have the opportunity to make a difference in the world of technology.\n\nWelcome to Banana Inc. Your adventure starts now...");
         setChoices(Arrays.asList("Start Your Adventure"));
+        setSecretButton("Hidden Button");
     }
 
     public void lifts(){
-        setMainText("You're standing by a set of very confusing lifts. Do you choose to follow: \n\nA) The tired person to your left? \nB) The friendly person to your right?");
-        setChoices(Arrays.asList("A) The tired person", "B) The friendly person"));
+        setMainText("You're standing by a set of very confusing lifts. You notice a variety of other people entering each lift, with no idea where to go, which lift would you like to enter? \n\nA) Someone is discussing an EC2 instance on the phone.\nB) A person is dressed in full running gear.\nC) Someone seems to be browsing a food menu on their phone.\nD) Another person is wearing headphones and appears excited for the day.");
+        setChoices(Arrays.asList("Enter Lift A", "Enter Lift B", "Enter Lift C", "Enter Lift D" ));
     }
 
-    public void tiredPerson(){
+    public void personA(){
         setMainText("Sabirah: Excuse me, are you the new apprentice?\n\nProfessor Liam asked me to keep an eye out for you. He's been expecting you.\n\nProfessor Liam is quite influential around here. You're in for a treat.");
         setChoices(Arrays.asList("See Professor Liam"));
     }
 
-    public void friendlyPerson(){
+    public void personB(){
         setMainText("Matt: Hey there! You heading down to the bike sheds, too? Follow me!\n\nYou get into a conversation with Matt in the lifts and he regales you with stories of his marathon training. You die of boredom.\n\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
+    }
+
+    public void personC(){
+        setMainText("Yusur: Hey, I am feeling real hungry, do you know what you're having for lunch? Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?\n\nA) Order Pizza\nB) Order Sushi");
+        setChoices(Arrays.asList("Order Pizza", "Order Sushi"));
+    }
+
+    public void pizza(){
+        setMainText("While waiting for your Pizza you meet Mohamed who tells you he has been networking all morning. One of the people he met was Professor Liam, kind of a big deal. He recommends that you meet him.");
+        setChoices(Arrays.asList("See Professor Liam"));
+    }
+
+    public void personD(){
+        setMainText("Zoe: Hey! You look new around here. Would you like to see some of the best spots in the building?\n\nWhere would you like to go?\n\nA) Sit on Couches\nB) Go Outside");
+        setChoices(Arrays.asList("Sit on Couches", "Go Outside"));
+    }
+    public void couches(){
+        setMainText("As you settle onto the couch, you find yourself next to Callum, whose hair seems to shift between hues of pink and blonde with remarkable speed. He immediately turns to you and inquires, 'Are you a Star Wars fan? Quick, tell me, what's the color of Luke Skywalker's lightsaber in Return of the Jedi?'");
+        setChoices(Arrays.asList("Green", "Blue"));
+    }
+
+    public void lightsaberGreen(){
+        setMainText("Callum: That's the correct answer, I like you. I'd like to introduce you to another nerd, his name is Professor Liam.");
+        setChoices(Arrays.asList("See Professor Liam"));
+    }
+    public void lightsaberBlue(){
+        setMainText("Callum: Wrong, call yourself a nerd? Go home.\n\nGAME OVER");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+    public void outside(){
+        setMainText("You walk outside and come across another Banana apprentice who introduces herself as Jocelyn.\n\nJocelyn mentions that she's been meaning to check out the view across the Thames and asks if you'd like to take a look at the view with her. Do you:\n\nA) Check out the view with Jocelyn?\nB) Politely decline as you're starting to feel a bit peckish and your Boots Meal Deal picnic is calling your name.");
+        setChoices(Arrays.asList("Look at View", "Have Picnic"));
+    }
+
+    public void lookAtView(){
+        setMainText("As you gaze across the breathtaking landscapes to the Knightsgate office, your moment of awe is abruptly interrupted as a flock of birds decides to drop their digested lunch over you. Feeling less than lucky, you decide to go home to change.\n\nGAME OVER");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+    public void havePicnic(){
+        setMainText("You head over to the grassy area and sit down to eat your picnic. Just as you've finished laying out your Boots Meal Deal someone rushes over to you.\n\nPerson: Oh! There you are! We've been looking for you, Professor Liam has been expecting you.");
+        setChoices(Arrays.asList("See Professor Liam"));
     }
 
     public void bossOne(){
@@ -106,13 +195,34 @@ public class Story {
         setChoices(Arrays.asList("A) Amazon S3", "B) Amazon EC2", "C) Amazon RDS", "D) Amazon Lambda"));
     }
 
-    public void gameOver(){
-        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this I'm guessing that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER");
+    public void gameOverLiam(){
+        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this you guess that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER");
         setChoices(Arrays.asList("Restart Game"));
     }
+
+    public void gameOverSushi(){
+        setMainText("Oh No!\n\nThe discounted sushi was a terrible idea.\n\nYou spend the rest of the day in the bathroom.\n\nGAME OVER");
+        setChoices(Arrays.asList("Restart Game"));
+    }
+
+
 
     public void win(){
         setMainText("That's correct! You seem to have what it takes to be an apprentice here at Banana Inc! Welcome to your first day...");
         setChoices(Arrays.asList("Start Again"));
+    }
+
+    public void secretButton(){
+        setMainText("What year was Apple founded?");
+        setChoices(Arrays.asList("1974","1976", "1977", "1979"));
+    }
+
+    public void secretGameOver(){
+        setMainText("GAME OVER");
+        setChoices(Arrays.asList("Start Again"));
+    }
+
+    public void keys(){
+        setMainText("CONGRATULATIONS, YOU FOUND THE SECRET BUTTON AND PASSED THE TEST. YOU NOW OWN THE COMPANY.");
     }
 }

@@ -235,3 +235,9 @@ body {
     letter-spacing: .15em;
     white-space: pre-wrap;
 }
+
+.secretButton {
+    background-color: black;
+    border:none;
+    opacity: 0.3;
+}
