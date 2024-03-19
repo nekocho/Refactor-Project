@@ -24,6 +24,7 @@ public class GameController {
         story.selectPosition("intro"); //Start the story
         model.addAttribute("mainTextArea", story.getMainText());
         model.addAttribute("choices", story.getCurrentChoices());
+        model.addAttribute("secretButton", story.getSecretButton());
         return "game";
     }
 

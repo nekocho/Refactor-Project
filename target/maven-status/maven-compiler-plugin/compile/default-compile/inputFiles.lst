@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/controller/HomeController.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/controller/GameController.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/LoadingDots.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/IntroText.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/StartGame.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameLevels/introLevel.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/introTextPrinter.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/gameIntro/Main.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/textLogic/TextTyping.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/model/Story.java
+/Users/matteast/Desktop/Refactor-Project/src/main/java/com/game/refactor/RefactorApplication.java
+=======
 /Users/callumbain/Documents/makers_final_project/team-sick-project/src/main/java/com/game/refactor/model/textLogic/TextTyping.java
 /Users/callumbain/Documents/makers_final_project/team-sick-project/src/main/java/com/game/refactor/controller/GameController.java
 /Users/callumbain/Documents/makers_final_project/team-sick-project/src/main/java/com/game/refactor/controller/HomeController.java
@@ -9,3 +22,4 @@
 /Users/callumbain/Documents/makers_final_project/team-sick-project/src/main/java/com/game/refactor/model/gameIntro/Main.java
 /Users/callumbain/Documents/makers_final_project/team-sick-project/src/main/java/com/game/refactor/model/gameLevels/introLevel.java
 /Users/callumbain/Documents/makers_final_project/team-sick-project/src/main/java/com/game/refactor/model/Story.java
+>>>>>>> main
