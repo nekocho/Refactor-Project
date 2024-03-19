@@ -19,14 +19,24 @@ public class GameController {
     }
 
     @GetMapping("/start")
-    public String index(Model model) {
-        // Initializing the game and pass initial data to Thymeleaf
-        story.selectPosition("intro"); //Start the story
+    public String handleStart(@RequestParam(name = "animationsEnabled", required = false) String animationsEnabled, Model model) {
+        // Initialize the game and pass initial data to Thymeleaf
+        story.selectPosition("intro"); // Start the story
         model.addAttribute("mainTextArea", story.getMainText());
         model.addAttribute("choices", story.getCurrentChoices());
         model.addAttribute("secretButton", story.getSecretButton());
+
+        if ("on".equals(animationsEnabled)) {
+            System.out.println(animationsEnabled);
+            model.addAttribute("animationsEnabled", true);
+        } else {
+            System.out.println(animationsEnabled);
+            model.addAttribute("animationsEnabled", false);
+        }
+
         return "game";
     }
+
 
     @PostMapping("/choice")
     public String handleChoice(@RequestParam("choice") String choice, Model model) {
