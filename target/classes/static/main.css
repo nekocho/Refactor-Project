@@ -65,10 +65,7 @@ body {
     text-align: center;
     font-size: 200%;
     color: #00FF00; /* Use a green color reminiscent of old retro art computers */
-    accent-color: white;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: black;
-
+    font-weight: bold;
 }
 
 /*Styling for Index.HTML*/
