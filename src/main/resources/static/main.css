@@ -54,7 +54,7 @@ body {
 /*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
-    height: 450px;
+    height: 500px;
     background: black;
     overflow: hidden;
     padding: 20px;
