@@ -7,7 +7,16 @@ body {
     color: white;
     font-family: "VT323", monospace;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 /* Hidden class for screen readers */
 .sr-only {
     position: absolute;
@@ -23,13 +32,27 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+}
+
+.image-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.image{
+    width: 150px;
+    height: auto;
 }
 
 /*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
-    height: 350px;
+    height: 400px;
     background: black;
     overflow: hidden;
     padding: 20px;
@@ -63,7 +86,6 @@ body {
 /*Start Button Styling*/
 
 .button * {
-    box-sizing: border-box;
     font-family: 'VT323', monospace;
     font-size: 24px;
     z-index: 10;
@@ -77,7 +99,6 @@ body {
     border-left: 6px inset rgba(0, 0, 0, .5);
     border-right: 6px inset rgba(255, 255, 255, .5);
     border-top: 6px inset rgba(255, 255, 255, .5);
-    box-sizing: border-box;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -100,15 +121,8 @@ body {
     justify-content: center; /* Center the buttons horizontally */
     margin-top: 40px;
 }
-/* Toggle index page */
-/* Centering the content vertically and horizontally within the body */
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
 
+/* Toggle index page */
 /* Styling for the text color of the toggle question */
 .toggleQuestion {
     color: white;
@@ -199,7 +213,6 @@ body {
     border-left: 6px inset rgba(0, 0, 0, .5);
     border-right: 6px inset rgba(255, 255, 255, .5);
     border-top: 6px inset rgba(255, 255, 255, .5);
-    box-sizing: border-box;
     color: white;
     cursor: pointer;
     font-family: monospace;
@@ -238,7 +251,13 @@ body {
 }
 
 .secretButton {
-    background-color: black;
+    background-color: #111;
     border:none;
     opacity: 0.3;
+    width: 20px;
+    height: 20px;
+}
+
+.secretButton:hover{
+    cursor: help;
 }
