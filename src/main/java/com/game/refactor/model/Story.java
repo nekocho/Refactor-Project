@@ -160,7 +160,7 @@ public class Story {
 
     public void personC(){
         setImagePath(null);
-        setMainText("Yusur: Hey, I am feeling real hungry, do you know what you're having for lunch? Apparently there are rumors of some discounted sushi but the Pizza is also good.\n\nWhat will you order?\n\nA) Order pizza\nB) Order sushi");
+        setMainText("Yusur: Hey, I am feeling real hungry, do you know what you're having for lunch? The pizza is really good, but apparently there are rumors of some discounted sushi.\n\nWhat will you order?\n\nA) Order pizza\nB) Order sushi");
         setChoices(Arrays.asList("Order Pizza", "Order Sushi"));
     }
 
@@ -222,7 +222,7 @@ public class Story {
 
     public void gameOverLiam(){
         setImagePath("game-over-skull-and-crossbones.png");
-        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this you guess that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER.");
+        setMainText("You look up at Professor Liam; he doesn't look mad, just disappointed. By this, you guess that wasn't the right answer.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER.");
         setChoices(Arrays.asList("Restart Game"));
     }
 
@@ -246,12 +246,13 @@ public class Story {
 
     public void secretGameOver(){
         setImagePath("game-over-skull-and-crossbones.png");
-        setMainText("You don't even know the simplest of things about this company. You should be ashamed of yourself.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER.  GAME OVER.");
+        setMainText("You don't even know the simplest of things about this company. You should be ashamed of yourself.\n\nYou leave with your shoulders slumped and your head hung low, trying to hide the tears.\n\nGAME OVER.");
         setChoices(Arrays.asList("Start Again"));
     }
 
     public void keys(){
         setImagePath("keysToBananaInc.png");
         setMainText("CONGRATULATIONS, YOU FOUND THE SECRET BUTTON AND PASSED THE TEST. Kim Took hands you the keys to Banana Inc. and the deeds to his name. YOU NOW OWN THE WORLD.");
+        setChoices(Arrays.asList("Start Again"));
     }
 }
