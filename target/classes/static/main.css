@@ -7,6 +7,14 @@ body {
     color: white;
     font-family: "VT323", monospace;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
 }
 /* Hidden class for screen readers */
 .sr-only {
@@ -23,13 +31,27 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+}
+
+.image-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.image{
+    width: 150px;
+    height: auto;
 }
 
 /*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
-    height: 350px;
+    height: 400px;
     background: black;
     overflow: hidden;
     padding: 20px;
@@ -100,15 +122,8 @@ body {
     justify-content: center; /* Center the buttons horizontally */
     margin-top: 40px;
 }
-/* Toggle index page */
-/* Centering the content vertically and horizontally within the body */
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
 
+/* Toggle index page */
 /* Styling for the text color of the toggle question */
 .toggleQuestion {
     color: white;
@@ -238,7 +253,13 @@ body {
 }
 
 .secretButton {
-    background-color: black;
+    background-color: #111;
     border:none;
     opacity: 0.3;
+    width: 20px;
+    height: 20px;
+}
+
+.secretButton:hover{
+    cursor: help;
 }

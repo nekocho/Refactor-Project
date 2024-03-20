@@ -22,6 +22,7 @@ public class GameController {
     public String handleStart(@RequestParam(name = "animationsEnabled", required = false) String animationsEnabled, Model model) {
         // Initialize the game and pass initial data to Thymeleaf
         story.selectPosition("intro"); // Start the story
+        model.addAttribute("imagePath", story.getImagePath());
         model.addAttribute("mainTextArea", story.getMainText());
         model.addAttribute("choices", story.getCurrentChoices());
         model.addAttribute("secretButton", story.getSecretButton());
@@ -46,6 +47,7 @@ public class GameController {
             return nextPage; // Redirect to start page (index.html)
         }
         // Update UI data based on story progression
+        model.addAttribute("imagePath", story.getImagePath());
         model.addAttribute("mainTextArea", story.getMainText());
         model.addAttribute("choices", story.getCurrentChoices());
         return "game"; // Display the game page

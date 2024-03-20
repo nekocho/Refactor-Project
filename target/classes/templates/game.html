@@ -17,11 +17,19 @@
         <h1>REFACTOR</h1>
     </div>
 
+
     <!-- Text Window Area -->
     <div class="text-area">
+
+        <div th:if="${imagePath != null}" class="image-container">
+            <img class="image" th:src="@{'/image/' + ${imagePath}}" th:alt="${imagePath}">
+        </div>
+
+
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
         <div class="sr-only" th:text="${mainTextArea}"></div>
     </div>
+
 
     <!-- Choice Buttons -->
     <div class="buttonWrapper">
