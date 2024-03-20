@@ -13,6 +13,9 @@ public class GameController {
     // Create the story
     private Story story = new Story();
 
+    // Declare animationsEnabled as a class-level field
+    private boolean animationsEnabled;
+
     @Autowired
     public GameController(Story story) {
         this.story = story;
@@ -27,7 +30,9 @@ public class GameController {
         model.addAttribute("choices", story.getCurrentChoices());
         model.addAttribute("secretButton", story.getSecretButton());
 
-        if ("on".equals(animationsEnabled)) {
+        this.animationsEnabled = "on".equals(animationsEnabled);
+
+        if (this.animationsEnabled) {
             System.out.println(animationsEnabled);
             model.addAttribute("animationsEnabled", true);
         } else {
@@ -50,6 +55,10 @@ public class GameController {
         model.addAttribute("imagePath", story.getImagePath());
         model.addAttribute("mainTextArea", story.getMainText());
         model.addAttribute("choices", story.getCurrentChoices());
+
+        // Retrieve the animation state and pass it to the view
+        model.addAttribute("animationsEnabled", this.animationsEnabled);
+
         return "game"; // Display the game page
     }
 }
