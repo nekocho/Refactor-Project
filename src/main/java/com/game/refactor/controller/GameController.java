@@ -33,10 +33,8 @@ public class GameController {
         this.animationsEnabled = "on".equals(animationsEnabled);
 
         if (this.animationsEnabled) {
-            System.out.println(animationsEnabled);
             model.addAttribute("animationsEnabled", true);
         } else {
-            System.out.println(animationsEnabled);
             model.addAttribute("animationsEnabled", false);
         }
 
