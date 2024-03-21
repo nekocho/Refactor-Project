@@ -253,7 +253,7 @@ public class Story {
     }
 
     public void keys(){
-        setImagePath("keysToBananaInc.png");
+        setImagePath("keys-to-banana-inc.png");
         setMainText("CONGRATULATIONS, YOU FOUND THE SECRET BUTTON AND PASSED THE TEST. Kim Took hands you the keys to Banana Inc. and the deeds to his name. YOU NOW OWN THE WORLD.");
         setChoices(Arrays.asList("Start Again"));
     }
