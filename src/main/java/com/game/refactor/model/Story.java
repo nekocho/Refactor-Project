@@ -135,14 +135,16 @@ public class Story {
 
     public void intro(){
         setImagePath("banana-inc-logo.png");
-        setMainText("As the sun rises over the sprawling campus of Banana Inc., a new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile. He hands you your I.D. and ushers you through the gates to the lifts.\n\nWelcome to Banana Inc. Your adventure starts now...");
+
+        setMainText("As the sun rises over the sprawling campus of Banana Inc., a new day dawns and a new journey begins. You find yourself standing at the gates of innovation, nerves tingling with anticipation as you take your first steps into the iconic headquarters.\n\nYou walk through the sleek, glass-fronted lobby, and your heart races as you approach the reception desk, where a friendly face welcomes you with a warm smile.\n\nMAC: Welcome to Banana Inc.! We'll have you doing presentations in no time!\n\nMAC hands you your I.D. and ushers you through the gates to the lifts.\n\nWelcome to Banana Inc. Your adventure starts now...");
+
         setChoices(Arrays.asList("Start Your Adventure"));
         setSecretButton("Hidden Button");
     }
 
     public void lifts(){
         setImagePath("lifts.png");
-        setMainText("You're standing by a set of very confusing lifts. You notice a variety of other people entering each lift, with no idea where to go, which lift would you like to enter? \n\nA) Someone is discussing an EC2 instance on the phone\nB) A person is dressed in full running gear\nC) Someone seems to be browsing a food menu on their phone\nD) Another person is wearing headphones and appears excited for the day");
+        setMainText("You're standing by a set of very confusing lifts. You notice a variety of other people entering each lift, with no idea where to go, which person do you follow? \n\nA) Someone is discussing an EC2 instance on the phone\nB) A person is dressed in full running gear\nC) Someone seems to be browsing a food menu on their phone\nD) Another person is wearing headphones and appears excited for the day");
         setChoices(Arrays.asList("Enter Lift A", "Enter Lift B", "Enter Lift C", "Enter Lift D" ));
     }
 
@@ -204,7 +206,7 @@ public class Story {
     }
     public void havePicnic(){
         setImagePath(null);
-        setMainText("You head over to the grassy area and sit down to eat your picnic. Just as you've finished laying out your Boots Meal Deal, someone rushes over to you.\n\nSabirah: Oh! There you are! We've been looking for you, Professor Liam has been expecting you. Come with me!");
+        setMainText("You head over to the grassy area and sit down to eat your picnic. Just as you've finished laying out your Boots Meal Deal, someone rushes over to you.\n\nIason: Oh! There you are! We've been looking for you, Professor Liam has been expecting you. Come with me!");
         setChoices(Arrays.asList("See Professor Liam"));
     }
 

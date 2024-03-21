@@ -32,6 +32,8 @@ body {
 
 .container {
     max-width: 800px;
+    max-height: 100%;
+    padding-bottom: 50px;
 }
 
 .image-container {
@@ -52,7 +54,7 @@ body {
 /*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
-    height: 400px;
+    height: 500px;
     background: black;
     overflow: hidden;
     padding: 20px;
@@ -63,6 +65,7 @@ body {
     text-align: center;
     font-size: 200%;
     color: #00FF00; /* Use a green color reminiscent of old retro art computers */
+    font-weight: bold;
 }
 
 /*Styling for Index.HTML*/

@@ -16,6 +16,7 @@ body {
 * {
     box-sizing: border-box;
 }
+
 /* Hidden class for screen readers */
 .sr-only {
     position: absolute;
@@ -31,6 +32,8 @@ body {
 
 .container {
     max-width: 800px;
+    max-height: 100%;
+    padding-bottom: 50px;
 }
 
 .image-container {
@@ -51,7 +54,7 @@ body {
 /*Where main text is displayed "Terminal Window"*/
 .text-area {
     width: 800px;
-    height: 400px;
+    height: 500px;
     background: black;
     overflow: hidden;
     padding: 20px;
@@ -62,6 +65,7 @@ body {
     text-align: center;
     font-size: 200%;
     color: #00FF00; /* Use a green color reminiscent of old retro art computers */
+    font-weight: bold;
 }
 
 /*Styling for Index.HTML*/
@@ -85,7 +89,6 @@ body {
 /*Start Button Styling*/
 
 .button * {
-    box-sizing: border-box;
     font-family: 'VT323', monospace;
     font-size: 24px;
     z-index: 10;
@@ -99,7 +102,6 @@ body {
     border-left: 6px inset rgba(0, 0, 0, .5);
     border-right: 6px inset rgba(255, 255, 255, .5);
     border-top: 6px inset rgba(255, 255, 255, .5);
-    box-sizing: border-box;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -214,7 +216,6 @@ body {
     border-left: 6px inset rgba(0, 0, 0, .5);
     border-right: 6px inset rgba(255, 255, 255, .5);
     border-top: 6px inset rgba(255, 255, 255, .5);
-    box-sizing: border-box;
     color: white;
     cursor: pointer;
     font-family: monospace;
