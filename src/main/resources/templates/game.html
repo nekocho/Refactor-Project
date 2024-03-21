@@ -27,9 +27,13 @@
 
 
         <div class="typewriter hidden" th:text="${mainTextArea}"></div>
-        <div class="sr-only" th:text="${mainTextArea}"></div>
     </div>
-
+<!-- Secret Button -->
+    <form method="post" action="/choice">
+        <input type="hidden" name="index" th:value="${secretButton}" /> <!-- Adding a hidden input field to pass the index value -->
+        <button class="secretButton" type="submit" name="choice" th:value="${secretButton}">
+        </button>
+    </form>
 
     <!-- Choice Buttons -->
     <div class="buttonWrapper">
@@ -42,11 +46,7 @@
             </form>
         </div>
     </div>
-        <form method="post" action="/choice">
-            <input type="hidden" name="index" th:value="${secretButton}" /> <!-- Adding a hidden input field to pass the index value -->
-            <button class="secretButton" type="submit" name="choice" th:value="${secretButton}">
-            </button>
-        </form>
+
 </div>
 </body>
 </html>
