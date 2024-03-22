@@ -174,7 +174,7 @@ public class Story {
 
     public void personD(){
         setImagePath(null);
-        setMainText("Zoe: Hey! You look new around here. Would you like to see some of the best spots in the building?\n\nWhere would you like to go?\n\nA) Sit on couches\nB) Go outside");
+        setMainText("Zoe: Hey! You look new around here. Let me show you some of the best spots in the building!\n\nWhere would you like to go?\n\nA) Sit on couches\nB) Go outside");
         setChoices(Arrays.asList("Sit on Couches", "Go Outside"));
     }
     public void couches(){
@@ -195,7 +195,7 @@ public class Story {
     }
     public void outside(){
         setImagePath(null);
-        setMainText("You walk outside and come across another Banana apprentice who introduces herself as Jocelyn.\n\nWith a broad smile, Jocelyn mentions that she's been meaning to check out the view across the Thames and asks if you'd like to take a look at the view with her. Do you:\n\nA) Check out the view with Jocelyn\nB) Politely decline as you're starting to feel a bit peckish and your Boots Meal Deal picnic is calling your name.");
+        setMainText("You walk outside and come across another Banana apprentice who introduces herself as Jocelyn.\n\nWith a broad smile, Jocelyn mentions that she's been meaning to check out the view across the Thames and asks if you'd like to take a look at the view with her. Do you:\n\nA) Check out the view with Jocelyn\nB) Politely decline as you're starting to feel a bit peckish and your Boots Meal Deal picnic is calling your name");
         setChoices(Arrays.asList("Look at View", "Have Picnic"));
     }
 
