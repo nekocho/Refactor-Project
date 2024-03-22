@@ -1,4 +1,4 @@
-![alt text](https://github.com/nekocho/Refactor-Project/blob/readme/title.jpg?raw=true)
+![alt text](https://github.com/nekocho/Refactor-Project/blob/readme/readme-images/title.jpg?raw=true)
 
 # REFACTOR: ADevs
 ## A text-based adventure game
