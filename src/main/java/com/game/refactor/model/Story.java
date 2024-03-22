@@ -61,7 +61,7 @@ public class Story {
     // Method to map choices to methods
     public String selectPosition(String nextPosition) {
         switch (nextPosition) {
-            case "intro", "Restart Game": //Intro
+            case "intro": //Intro
                 intro();
                 break;
             case "Start Your Adventure": //Lift section
@@ -117,13 +117,13 @@ public class Story {
             case "B) Amazon EC2": // Question 2 Correct Answer
                 win();
                 break;
-            case "1974", "1977", "1979":
+            case "8781", "1324", "2685":
                 secretGameOver();
                 break;
-            case "1976":
+            case "7916":
                 keys();
                 break;
-            case "Start Again":
+            case "Start Again", "Restart Game":
                 // Handle any necessary tasks before redirecting
                 return "redirect:/"; // Special return value indicating a redirect
             case "Hidden Button":
@@ -243,7 +243,7 @@ public class Story {
     public void secretButton(){
         setImagePath(null);
         setMainText("You walk through a tiny, imperceptible hole in the brickwork into a large office, where a white-haired man appears to be pensively gazing out of a window. He turns to you, surprised, as you walk in. Unexpectedly, he asks you: 'What year was Banana Inc. founded?'");
-        setChoices(Arrays.asList("1974","1976", "1977", "1979"));
+        setChoices(Arrays.asList("8781","7916", "1324", "2685"));
     }
 
     public void secretGameOver(){
